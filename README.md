@@ -1,110 +1,155 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# <p style="text-align: center;"></p>
 
-Welcome Katie Coughlan,
+![Image]()
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+[Click here to view the live web application]()
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## Index - Table of Content
 
-A blue button should appear to click: _Make Public_,
+- [User Experience (UX)](#user-experience-ux)
+- [Design](#design)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
 
-Another blue button should appear to click: _Open Browser_.
+## User Experience (UX)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+The site is presented in a minimalist bur effective way, provide all the information the user needs. In general, users can ........................
 
-A blue button should appear to click: _Make Public_,
+### User stories 
 
-Another blue button should appear to click: _Open Browser_.
+- As a player, I want to be able to choose from rock, paper, scissors, lizard, or Spock so that I can have a variety of options when playing the game.
+- As a player, I want to see clear and understandable instructions on how to play the game, including the rules and what beats what, to ensure I understand the gameplay.
+- As a player, I want to be able to play against the computer in single-player mode so that I can enjoy the game even when I don't have someone else to play with.
+- As a player, I want the game to have different difficulty levels (easy, medium, hard) so that I can choose a challenge level that suits my skill level.
+- As a player, I want the game to keep track of my wins, losses, and ties so that I can track my progress and improve my skills over time.
+- As a player, I want the game to have engaging visuals and sound effects to enhance the gaming experience.
+- As a player, I want the game to provide feedback on my choices and the outcome of each round so that I can understand why I won, lost, or tied.
+- As a player, I want the option to play against another player locally or online so that I can compete with friends or other players around the world.
+- As a player, I want the game to have a quick and easy-to-understand interface so that I can jump into gameplay without any unnecessary delays or confusion.
+- As a player, I want the option to customize the game settings, such as the choosing the rounds or a mute button for sound effects.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+## Design
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Technologies Used
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Languages
 
-------
+- [HTML](https://en.wikipedia.org/wiki/HTML5)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-## Release History
+## Frameworks & Tools
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- [Bootstrap v5.3.2](https://getbootstrap.com/)
+   - Used to help with the responsiveness of the site and to aid the coding of some of the layout, including the nav bar, the images & the footer
 
-**September 20 2023:** Update Python version to 3.9.17.
+- [Balsamiq](https://balsamiq.com/)
+   - Used to create the wireframes during the design process
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- [Favicon.io](https://favicon.io/)
+   - Used to create and add the favicon to the browser tab
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- [Font Awesome](https://fontawesome.com/)
+   - Used to add icons to the site for aesthetic and UX purposes.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- [GitHub](https://github.com/)
+   - Used to store the project code after being created in GitPod 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- [Gitpod](https://www.gitpod.io/)
+   - Used to create, edit & preview the project's code
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- [Google Fonts](https://fonts.google.com/)
+   - Used to import the 'Reboto' and 'Exo' fonts into the style.css file which are used on all pages of the project.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- [Smartmockups](https://smartmockups.com/)
+   - Used to develop the wireframes in to a full mockup including colours, fonts, proportions, etc
+  
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Features
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Features Left to Implement
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Testing
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Validator testing
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- HTML
+     
 
-------
+- CSS
 
-## FAQ about the uptime script
+- JavaScript
+     
+### Browser Compatibility
 
-**Why have you added this script?**
+The site was tested on the following browsers
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- Google Chrome
+- Mozilla Firefox
+- Mricrosoft Edge
+- Safari on MacOS 
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+## Deployment 
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### GitHub Pages
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+The site was deployed to GitHub pages. The steps to deploy are as follows: 
 
-**So….?**
+1. In the GitHub repository, navigate to the Settings tab
+2. From the left hand menu select 'Pages'
+3. From the source select Branch: main
+4. Click 'Save'
+5. A live link will be displayed when published successfully.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+The live link can be found [here]() .
 
-**Can I opt out?**
+### Forking the GitHub Repository
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+You can fork the repository by following these steps:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+1. Go to the GitHub repository
+2. Click on Fork button in upper right hand corner
 
-**Anything more?**
+### Cloning the GitHub Repository
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+You can clone the repository to use locally by following these steps:
 
----
+1. Navigate to the GitHub Repository you want to clone
+2. Click on the code drop down button
+3. lick on HTTPS
+4. Copy the repository link to the clipboard
+5. Open your IDE of choice (git must be installed for the next steps)
+6. Type git clone copied-git-url into the IDE terminal
 
-Happy coding!
+The project will now be cloned locally for you to use.
+
+## Credits
+
+### Code
+
+- Bootstrap 4: Boostrap library used throughout the project for layout and responsiveness using the Bootstrap Grid System.
+- Favicon.io: Used to create the site Favicon and provided the code in the head of all pages.
+
+### Content
+
+
+
+### Media
+
+
+
+
+### Acknowledgements
+
+- The whole team at Code Institute for their teaching and support.
