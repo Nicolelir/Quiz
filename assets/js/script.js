@@ -105,16 +105,6 @@ function compare(comChoice) {
 	}
 };
 
-// Testing Function 
-
-function countToThree() {
-	for (let i = 1; i <= 3; i++) {
-	  console.log(i);
-	}
-  }
-  
-  countToThree();
-
   // -----Katie WIP----
 
 // Check winner of round
@@ -176,4 +166,18 @@ function compare(computerAction) {
 		}
 	}
 };
+
+// Check winner of game
+
+function winner() {
+	if (computerTally > playerTally) {
+		return "Bazinga, the computer won the game!";
+	} else if (computerTally === playerTally) {
+		return "It's a draw!"
+	} else {
+		return "Eureka, congrats, you won the game!";
+	}
+}
+
+
 
