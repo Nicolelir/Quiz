@@ -105,3 +105,12 @@ function compare(comChoice) {
 	}
 };
 
+// Testing Function 
+
+function countToThree() {
+	for (let i = 1; i <= 3; i++) {
+	  console.log(i);
+	}
+  }
+  
+  countToThree();
