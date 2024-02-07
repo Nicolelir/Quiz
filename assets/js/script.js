@@ -30,6 +30,63 @@ document.addEventListener("DOMContentLoaded", function() {
 	let roundsPlayed = 0;
     const maxRounds = 3;
 
+//compare user/computer choises
+function compare(comChoice) {
+	if (userChoice === comChoice) {
+    return "";
+	} else if (userChoice === "rock") {
+		if (comChoice === "paper") {
+      return "";
+		} else if (comChoice === "scissors") {
+      return "";
+		} else if (comChoice === "lizard") {
+			return "";
+		} else {
+			return "";
+		}
+	} else if (userChoice === "paper") {
+		if (comChoice === "rock") {
+			return "";
+		} else if (comChoice === "scissors") {
+			return "";
+		} else if (comChoice === "lizard") {
+			return "";
+		} else {
+			return "";
+		}
+	}else if (userChoice === "scissors") {
+		if (comChoice === "rock") {
+			return "";
+		} else if (comChoice === "paper") {
+			return "";
+		} else if (comChoice === "lizard") {
+			return "";
+		} else {
+			return "";
+		}
+	} else if (userChoice === "lizard") {
+		if (comChoice === "rock") {
+			return "";
+		} else if (comChoice === "paper") {
+			return "";
+		} else if (comChoice === "scissors") {
+			return "";
+		} else {
+			return "";
+		}
+	} else if (userChoice === "spock") {
+		if (comChoice === "rock") {
+			return "";
+		} else if (comChoice === "paper") {
+			return "";
+		} else if (comChoice === "scissors") {
+			return "";
+		} else {
+			return "";
+		}
+	}
+};
+
 	for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "submit") {
@@ -50,7 +107,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // -----Katie WIP----
-
 // Check winner of round
 var playerAction;
 var computerAction;
@@ -110,4 +166,18 @@ function compare(computerAction) {
 		}
 	}
 };
+
+// Check winner of game
+
+function winner() {
+	if (computerTally > playerTally) {
+		return "Bazinga, the computer won the game!";
+	} else if (computerTally === playerTally) {
+		return "It's a draw!"
+	} else {
+		return "Eureka, congrats, you won the game!";
+	}
+}
+
+
 
