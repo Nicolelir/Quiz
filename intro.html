@@ -33,23 +33,24 @@
             font-family: Arial, sans-serif;
             background-color: #282c34;
             color: #ffffff;
-            transition: background-color 0.5s ease, color 0.5s ease;
+            filter: blur(0);
+            transition: filter background-color 0.5s ease, color 0.5s ease;
         }
 
         .slam-container {
             position: relative;
-            height: 100vh;
+            margin-top: 150px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            line-height: 50px;
             transition: transform 0.5s ease;
         }
 
         .slam-paragraph {
             text-transform: uppercase;
             transform: translateY(-50px);
+            padding: 5px 0;
             opacity: 0;
             transition: opacity 0.5s, transform 0.5s;
         }
@@ -64,27 +65,24 @@
             font-family: 'Bahnschrift';
             font-weight: lighter;
             font-size: 5vw;
-            letter-spacing: 0.2vw;
+            letter-spacing: 0.1vw;
         }
 
         .scissorsParagraph {
             font-family: 'Times New Roman', Times, serif;
-            font-size: 3.7vw;
-            margin-top: -20px;
-            margin-bottom: -2px;
+            font-size: 3.6vw;
         }
 
         .lizardParagraph {
             font-family: 'Brush Script MT', cursive;
-            font-size: 4.15vw;
+            font-size: 4.1vw;
         }
 
         .spockParagraph {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.8vw;
+            font-size: 3.7vw;
             font-weight: 100;
             letter-spacing: 0.2vw;
-            margin-top: -15px;
         }
 
         #overlay {
@@ -96,7 +94,7 @@
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(10px);
-            z-index: 2;
+            z-index: 3;
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -118,6 +116,11 @@
             display: block;
             margin-bottom: 10px;
         }
+
+        #introMenu {
+            opacity: 0;
+            transition: opacity 0.5s, transform 0.5s;
+        }
     </style>
 
     <title>Intro Splash Screen</title>
@@ -125,117 +128,121 @@
 
 <body>
 
+
+
+    <div class="slam-container">
+        <p class="slam-paragraph rockParagraph">Rock</p>
+        <p class="slam-paragraph paperParagraph">Paper</p>
+        <p class="slam-paragraph scissorsParagraph">Scissors</p>
+        <p class="slam-paragraph lizardParagraph">Lizard</p>
+        <p class="slam-paragraph spockParagraph">Spock</p>
+
+    </div>
+
+    <br>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="slam-container">
-                            <p class="slam-paragraph rockParagraph">Rock</p>
-                            <p class="slam-paragraph paperParagraph">Paper</p>
-                            <p class="slam-paragraph scissorsParagraph">Scissors</p>
-                            <p class="slam-paragraph lizardParagraph">Lizard</p>
-                            <p class="slam-paragraph spockParagraph">Spock</p>
+        <div class="row" id="introMenu">
+            <div class="col-md-4">
+                <button id="openButton" type="button" class="btn btn-block btn-primary">
+                    HOW TO
+                </button>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <button type="button" class="btn btn-block btn-primary">
-                            Button
-                        </button>
-                    </div>
-                    <div class="col-md-4">
-                        <button id="openButton" type="button" class="btn btn-block btn-primary">
-                            Overlay
-                        </button>
-
-                        <div id="overlay">
-                            <div id="square">
-                                <img src="https://e7.pngegg.com/pngimages/189/529/png-clipart-sheldon-cooper-the-big-bang-theory-meme-jim-parsons-english-grammar-the-big-bang-theory-face-head-thumbnail.png"
-                                    alt="Sheldon">
-                                <span class="tutorialText">It's like rock, paper, and scissors - but quirky!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <button type="button" class="btn btn-block btn-primary">
-                            Button
-                        </button>
+                <div id="overlay">
+                    <div id="square">
+                        <img src="https://e7.pngegg.com/pngimages/189/529/png-clipart-sheldon-cooper-the-big-bang-theory-meme-jim-parsons-english-grammar-the-big-bang-theory-face-head-thumbnail.png"
+                            alt="Sheldon">
+                        <span class="tutorialText">It's like rock, paper, and scissors - but quirky!</span>
                     </div>
                 </div>
             </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-block btn-primary">
+                    <a href="index.html" style="color: #fff; text-decoration: none;">PLAY</a>
+
+                </button>
+            </div>
         </div>
+    </div>
+    </div>
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const openButton = document.getElementById("openButton");
-            const overlay = document.getElementById("overlay");
-            const body = document.body;
+document.addEventListener("DOMContentLoaded", function () {
+    const openButton = document.getElementById("openButton");
+    const overlay = document.getElementById("overlay");
+    const body = document.body;
 
-            let finalBackgroundColor, finalFontColor;
+    let finalBackgroundColor, finalFontColor;
 
-            // Run the color change animation
-            changeColors();
+    // Define an array of preferred text colors
+    const preferredTextColors = ["#fff", "#000"];
 
-            openButton.addEventListener("click", function () {
-                overlay.style.display = "block";
-                setTimeout(() => {
-                    overlay.style.opacity = "1";
-                }, 10);
-            });
+    // Run the colour change animation
+    changeColors();
 
-            overlay.addEventListener("click", function () {
-                overlay.style.opacity = "0";
-                setTimeout(() => {
-                    overlay.style.display = "none";
-                }, 300); // Adjust the duration to match the transition duration
-            });
+    openButton.addEventListener("click", function () {
+        overlay.style.display = "block";
+        setTimeout(() => {
+            overlay.style.opacity = "1";
+        }, 10);
+    });
 
-            function changeColors() {
-                const paragraphs = document.querySelectorAll(".slam-paragraph");
-                const slamContainer = document.querySelector(".slam-container");
-                const playButton = document.querySelector(".playButton");
+    overlay.addEventListener("click", function () {
+        overlay.style.opacity = "0";
+        setTimeout(() => {
+            overlay.style.display = "none";
+        }, 300); // Adjust the duration to match the transition duration
+    });
 
-                paragraphs.forEach((paragraph, index) => {
-                    setTimeout(() => {
-                        paragraph.style.opacity = "1";
-                        paragraph.style.transform = "scale(3.0)";
+    function changeColors() {
+        const paragraphs = document.querySelectorAll(".slam-paragraph");
+        const slamContainer = document.querySelector(".slam-container");
+        const introMenu = document.querySelector("#introMenu");
 
-                        // Change background and font color dynamically during the first part
-                        body.style.backgroundColor = getRandomColor();
-                        body.style.color = getRandomColor();
+        paragraphs.forEach((paragraph, index) => {
+            setTimeout(() => {
+                paragraph.style.opacity = "1";
+                paragraph.style.transform = "scale(3.0)";
 
-                        if (index === paragraphs.length - 1) {
-                            // Store the final colors
-                            finalBackgroundColor = body.style.backgroundColor;
-                            finalFontColor = body.style.color;
-                        }
-                    }, index * 500);
-                });
+                // Change background and font colour dynamically during the first part
+                body.style.backgroundColor = getRandomColor();
+                body.style.color = getRandomTextColor();
 
-                setTimeout(() => {
-                    // Move the entire container up by 100px
-                    slamContainer.style.transform = "translateY(-100px)";
-
-                    // Change background and font color to specific values in the second part
-                    body.style.backgroundColor = "#333333";
-                    body.style.color = "#ffffff";
-                }, paragraphs.length * 500 + 1000);
-            }
-
-            function getRandomColor() {
-                // Function to generate a random color
-                const letters = "0123456789ABCDEF";
-                let color = "#";
-                for (let i = 0; i < 6; i++) {
-                    color += letters[Math.floor(Math.random() * 16)];
+                if (index === paragraphs.length - 1) {
+                    // Store the final colours
+                    finalBackgroundColor = body.style.backgroundColor;
+                    finalFontColor = body.style.color;
                 }
-                return color;
-            }
+            }, index * 500);
         });
+
+        setTimeout(() => {
+            // Move the entire contaispener up by 100px
+            slamContainer.style.transform = "translateY(-100px)";
+            introMenu.style.opacity = "1";
+            introMenu.style.transform = "translateY(-100px)";
+
+            // Change background and font colour to specific values in the second part
+            body.style.backgroundColor = "#333333";
+            body.style.color = "#ffffff";
+        }, paragraphs.length * 500 + 1000);
+    }
+
+    function getRandomColor() {
+        // Function to generate a random colour
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    function getRandomTextColor() {
+        // Function to get a random text colour from the preferred colors array
+        return preferredTextColors[Math.floor(Math.random() * preferredTextColors.length)];
+    }
+});
     </script>
 </body>
 
