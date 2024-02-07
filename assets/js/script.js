@@ -1,28 +1,5 @@
 
-// 3 rounds function
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
-	let roundsPlayed = 0;
-    const maxRounds = 3;
-
-	for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                checkAnswer();
-            } else {
-                if (roundsPlayed < maxRounds) {
-                    let gameType = this.getAttribute("data-type");
-                    runGame(gameType);
-                    roundsPlayed++;
-                }
-                
-                if (roundsPlayed === maxRounds) { // Add here function after 3 rounds.... 
-                   
-                }
-            }
-        });
-    }
-});
+// --NICOLE--
 
 //random function
 function runGame(gameType) {
@@ -47,6 +24,11 @@ function runGame(gameType) {
 		"<br>" + "Computer: " + computerChoice.toUpperCase() + "</p>" + "<p>" + result + "</p>";
 }
 
+// 3 rounds function
+document.addEventListener("DOMContentLoaded", function() {
+    let buttons = document.getElementsByTagName("button");
+	let roundsPlayed = 0;
+    const maxRounds = 3;
 
 //compare user/computer choises
 function compare(comChoice) {
@@ -105,8 +87,26 @@ function compare(comChoice) {
 	}
 };
 
-  // -----Katie WIP----
+	for (let button of buttons) {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("data-type") === "submit") {
+                checkAnswer();
+            } else {
+                if (roundsPlayed < maxRounds) {
+                    let gameType = this.getAttribute("data-type");
+                    runGame(gameType);
+                    roundsPlayed++;
+                }
+                
+                if (roundsPlayed === maxRounds) { // Add here function after 3 rounds.... 
+                   
+                }
+            }
+        });
+    }
+});
 
+// -----Katie WIP----
 // Check winner of round
 var playerAction;
 var computerAction;
