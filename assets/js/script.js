@@ -1,28 +1,5 @@
 
-// 3 rounds function
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
-	let roundsPlayed = 0;
-    const maxRounds = 3;
-
-	for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                checkAnswer();
-            } else {
-                if (roundsPlayed < maxRounds) {
-                    let gameType = this.getAttribute("data-type");
-                    runGame(gameType);
-                    roundsPlayed++;
-                }
-                
-                if (roundsPlayed === maxRounds) { // Add here function after 3 rounds.... 
-                   
-                }
-            }
-        });
-    }
-});
+// --NICOLE--
 
 //random function
 function runGame(gameType) {
@@ -47,6 +24,11 @@ function runGame(gameType) {
 		"<br>" + "Computer: " + computerChoice.toUpperCase() + "</p>" + "<p>" + result + "</p>";
 }
 
+// 3 rounds function
+document.addEventListener("DOMContentLoaded", function() {
+    let buttons = document.getElementsByTagName("button");
+	let roundsPlayed = 0;
+    const maxRounds = 3;
 
 //compare user/computer choises
 function compare(comChoice) {
@@ -105,12 +87,85 @@ function compare(comChoice) {
 	}
 };
 
-// Testing Function 
+	for (let button of buttons) {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("data-type") === "submit") {
+                checkAnswer();
+            } else {
+                if (roundsPlayed < maxRounds) {
+                    let gameType = this.getAttribute("data-type");
+                    runGame(gameType);
+                    roundsPlayed++;
+                }
+                
+                if (roundsPlayed === maxRounds) { // Add here function after 3 rounds.... 
+                   
+                }
+            }
+        });
+    }
+});
 
-function countToThree() {
-	for (let i = 1; i <= 3; i++) {
-	  console.log(i);
+// -----Katie WIP----
+// Check winner of round
+var playerAction;
+var computerAction;
+
+function compare(computerAction) {
+	if (playerAction === comChoice) {
+    return "Snap! It's a draw!";
+	} else if (playerAction === "rock") {
+		if (computerAction === "paper") {
+      return "Bazinga, you lost!";
+		} else if (computerAction === "scissors") {
+      return "Eureka, you won!";
+		} else if (computerAction === "lizard") {
+			return "Eureka, you won!";
+		} else {
+			return "Bazinga, you lost!";
+		}
+	} else if (playerAction === "paper") {
+		if (computerAction === "rock") {
+			return "Eureka, you won!";
+		} else if (computerAction === "scissors") {
+			return "Bazinga, you lost!";
+		} else if (computerAction === "lizard") {
+			return "Bazinga, you lost!";
+		} else {
+			return "Eureka, you won!";
+		}
+	}else if (playerAction === "scissors") {
+		if (computerAction === "rock") {
+			return "Bazinga, you lost!";
+		} else if (computerAction === "paper") {
+			return "Eureka, you won!";
+		} else if (computerAction === "lizard") {
+			return "Eureka, you won!";
+		} else {
+			return "Bazinga, you lost!";
+		}
+	} else if (playerAction === "lizard") {
+		if (computerAction === "rock") {
+			return "Bazinga, you lost!";
+		} else if (computerAction === "paper") {
+			return "Eureka, you won!";
+		} else if (computerAction === "scissors") {
+			return "Bazinga, you lost!";
+		} else {
+			return "Eureka, you won!";
+		}
+	} else if (playerAction === "spock") {
+		if (computerAction === "rock") {
+			return "Eureka, you won!";
+		} else if (computerAction === "paper") {
+			return "Bazinga, you lost!";
+		} else if (computerAction === "scissors") {
+			return "Eureka, you won!";
+		} else {
+			return "Bazinga, you lost!";
+		}
 	}
+<<<<<<< HEAD
   }
   
   countToThree();
@@ -136,3 +191,33 @@ function countToThree() {
 	  }, 300); // Adjust the duration to match the transition duration
 	});
   });
+=======
+};
+
+// Check winner of game
+
+function winner() {
+	if (computerTally > playerTally) {
+		return "Bazinga, the computer won the game!";
+	} else if (computerTally === playerTally) {
+		return "It's a draw!"
+	} else {
+		return "Eureka, congrats, you won the game!";
+	}
+}
+
+// Results tally
+
+resultsTally(winner) {
+	round++;
+	if(winner === player) {
+		playerTally++;
+		document.getElementById("playerTally").innerHTML = playerTally;
+	} else if(winner === computer) {
+		computerTally++;
+		document.getElementById("computerTally").innerHTML = computerTally;
+	}
+}
+
+
+>>>>>>> 0c5469e455e746b5093fbd2a06a13b01959a8374
