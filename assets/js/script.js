@@ -115,4 +115,65 @@ function countToThree() {
   
   countToThree();
 
-  I am the winner
+  // -----Katie WIP----
+
+// Check winner of round
+var playerAction;
+var computerAction;
+
+function compare(computerAction) {
+	if (playerAction === comChoice) {
+    return "Snap! It's a draw!";
+	} else if (playerAction === "rock") {
+		if (computerAction === "paper") {
+      return "Bazinga, you lost!";
+		} else if (computerAction === "scissors") {
+      return "Eureka, you won!";
+		} else if (computerAction === "lizard") {
+			return "Eureka, you won!";
+		} else {
+			return "Bazinga, you lost!";
+		}
+	} else if (playerAction === "paper") {
+		if (computerAction === "rock") {
+			return "Eureka, you won!";
+		} else if (computerAction === "scissors") {
+			return "Bazinga, you lost!";
+		} else if (computerAction === "lizard") {
+			return "Bazinga, you lost!";
+		} else {
+			return "Eureka, you won!";
+		}
+	}else if (playerAction === "scissors") {
+		if (computerAction === "rock") {
+			return "Bazinga, you lost!";
+		} else if (computerAction === "paper") {
+			return "Eureka, you won!";
+		} else if (computerAction === "lizard") {
+			return "Eureka, you won!";
+		} else {
+			return "Bazinga, you lost!";
+		}
+	} else if (playerAction === "lizard") {
+		if (computerAction === "rock") {
+			return "Bazinga, you lost!";
+		} else if (computerAction === "paper") {
+			return "Eureka, you won!";
+		} else if (computerAction === "scissors") {
+			return "Bazinga, you lost!";
+		} else {
+			return "Eureka, you won!";
+		}
+	} else if (playerAction === "spock") {
+		if (computerAction === "rock") {
+			return "Eureka, you won!";
+		} else if (computerAction === "paper") {
+			return "Bazinga, you lost!";
+		} else if (computerAction === "scissors") {
+			return "Eureka, you won!";
+		} else {
+			return "Bazinga, you lost!";
+		}
+	}
+};
+
