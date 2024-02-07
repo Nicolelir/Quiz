@@ -19,7 +19,7 @@
 
 ## User Experience (UX)
 
-The site is presented in a minimalist bur effective way, provide all the information the user needs. In general, users can ........................
+
 
 ### User stories 
 
@@ -48,7 +48,7 @@ The site is presented in a minimalist bur effective way, provide all the informa
 ## Frameworks & Tools
 
 - [Bootstrap v5.3.2](https://getbootstrap.com/)
-   - Used to help with the responsiveness of the site and to aid the coding of some of the layout, including the nav bar, the images & the footer
+   - Used to help with the responsiveness of the site and to aid the coding of some of the layout
 
 - [Balsamiq](https://balsamiq.com/)
    - Used to create the wireframes during the design process
@@ -85,7 +85,6 @@ The site is presented in a minimalist bur effective way, provide all the informa
 
 - HTML
      
-
 - CSS
 
 - JavaScript
@@ -138,7 +137,7 @@ The project will now be cloned locally for you to use.
 
 ### Code
 
-- Bootstrap 4: Boostrap library used throughout the project for layout and responsiveness using the Bootstrap Grid System.
+- Bootstrap 5: Boostrap library used throughout the project for layout and responsiveness using the Bootstrap Grid System.
 - Favicon.io: Used to create the site Favicon and provided the code in the head of all pages.
 
 ### Content
