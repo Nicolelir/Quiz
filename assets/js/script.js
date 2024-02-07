@@ -3,25 +3,25 @@
 
 //random function
 function runGame(gameType) {
-	playerAction = gameType;
-	computerAction = Math.floor(Math.random() * 5);
-	switch (computerAction) {
-		case 0: computerAction = "rock";
+	userChoice = gameType;
+	computerChoice = Math.floor(Math.random() * 5);
+	switch (computerChoice) {
+		case 0: computerChoice = "rock";
 			break;
-		case 1: computerAction = "paper";
+		case 1: computerChoice = "paper";
 			break;
-		case 2: computerAction = "scissors";
+		case 2: computerChoice = "scissors";
 			break;
-		case 3: computerAction = "lizard";
+		case 3: computerChoice = "lizard";
 			break;
-		case 4: computerAction = "spock";
+		case 4: computerChoice = "spock";
 			break;
 	}
 
-	var result = compare(computerAction).toUpperCase();
+	var result = compare(computerChoice).toUpperCase();
 
-	document.querySelector(".result").innerHTML = "<h3>User/Computer:</h3><p>User: " + playerAction.toUpperCase() +
-		"<br>" + "Computer: " + computerAction.toUpperCase() + "</p>" + "<p>" + result + "</p>";
+	document.querySelector(".result").innerHTML = "<h3>User/Computer:</h3><p>User: " + userChoice.toUpperCase() +
+		"<br>" + "Computer: " + computerChoice.toUpperCase() + "</p>" + "<p>" + result + "</p>";
 }
 
 // 3 rounds function
@@ -29,6 +29,63 @@ document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 	let roundsPlayed = 0;
     const maxRounds = 3;
+
+//compare user/computer choises
+function compare(comChoice) {
+	if (userChoice === comChoice) {
+    return "";
+	} else if (userChoice === "rock") {
+		if (comChoice === "paper") {
+      return "";
+		} else if (comChoice === "scissors") {
+      return "";
+		} else if (comChoice === "lizard") {
+			return "";
+		} else {
+			return "";
+		}
+	} else if (userChoice === "paper") {
+		if (comChoice === "rock") {
+			return "";
+		} else if (comChoice === "scissors") {
+			return "";
+		} else if (comChoice === "lizard") {
+			return "";
+		} else {
+			return "";
+		}
+	}else if (userChoice === "scissors") {
+		if (comChoice === "rock") {
+			return "";
+		} else if (comChoice === "paper") {
+			return "";
+		} else if (comChoice === "lizard") {
+			return "";
+		} else {
+			return "";
+		}
+	} else if (userChoice === "lizard") {
+		if (comChoice === "rock") {
+			return "";
+		} else if (comChoice === "paper") {
+			return "";
+		} else if (comChoice === "scissors") {
+			return "";
+		} else {
+			return "";
+		}
+	} else if (userChoice === "spock") {
+		if (comChoice === "rock") {
+			return "";
+		} else if (comChoice === "paper") {
+			return "";
+		} else if (comChoice === "scissors") {
+			return "";
+		} else {
+			return "";
+		}
+	}
+};
 
 	for (let button of buttons) {
         button.addEventListener("click", function() {
@@ -55,7 +112,7 @@ var playerAction;
 var computerAction;
 
 function compare(computerAction) {
-	if (playerAction === computerAction) {
+	if (playerAction === comChoice) {
     return "Snap! It's a draw!";
 	} else if (playerAction === "rock") {
 		if (computerAction === "paper") {
@@ -122,5 +179,17 @@ function winner() {
 	}
 }
 
+// Results tally
+
+resultsTally(winner) {
+	round++;
+	if(winner === player) {
+		playerTally++;
+		document.getElementById("playerTally").innerHTML = playerTally;
+	} else if(winner === computer) {
+		computerTally++;
+		document.getElementById("computerTally").innerHTML = computerTally;
+	}
+}
 
 
