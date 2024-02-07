@@ -19,3 +19,20 @@
 	  }, 300); // Adjust the duration to match the transition duration
 	});
   });
+
+  //Countdown Timer Reference 
+
+  function countdown() {
+	var seconds = 60; // Number of seconds to count down
+
+	var countdownTimer = setInterval(function() {
+	  seconds--;
+
+	  document.getElementById("countdown").innerHTML = seconds + "s";
+
+	  if (seconds <= 0) {
+		clearInterval(countdownTimer);
+		document.getElementById("countdown").innerHTML = "Expired";
+	  }
+	}, 1000);
+  }
