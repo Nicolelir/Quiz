@@ -2,7 +2,7 @@ let userChoice;
 let computerChoice;
 let overallResult;
 let roundsPlayed = 0;
-const maxRounds = 3;
+const maxRounds = 3000;
 let playerAction;
 let computerAction;
 let playerTally = 0;
@@ -23,16 +23,23 @@ document.addEventListener("DOMContentLoaded", function () {
                     let gameType = this.getAttribute("data-type");
                     runGame(gameType);
                     roundsPlayed++;
-                    updateProgressBar();
+                    
+                    // Start the countdown timer only if it's the first move
+                    if (roundsPlayed === 1) {
+                        countdown();
+                    }
                 }
 
-                if (roundsPlayed === maxRounds) {
+                // Check if the timer has expired after each button click
+                if (document.getElementById("countdown").innerHTML === "Time's up!") {
                     displayOverallWinner();
                 }
-            }
+                
+                           }
         });
     }
 });
+
 
 function runGame(gameType) {
     playerAction = gameType;
@@ -55,26 +62,28 @@ function runGame(gameType) {
     document.querySelector(".result").innerHTML = "<h3>User/Computer:</h3><p>User: " + playerAction.toUpperCase() +
         "<br>" + "Computer: " + computerAction.toUpperCase() + "</p>" + "<p>" + result + "</p>";
 
+    // Start the countdown timer
+    if (roundsPlayed === 0) {
+        countdown();
+    }
+
     return result; // Return the result for updating scores
 }
 
-//Countdown Timer Reference 
+// function countdown() {
+//     var seconds = 60; // Number of seconds to count down
 
-function countdown() {
-  var seconds = 60; // Number of seconds to count down
+//     var countdownTimer = setInterval(function() {
+//         seconds--;
 
-  var countdownTimer = setInterval(function() {
-    seconds--;
+//         document.getElementById("countdown").innerHTML = seconds + "s";
 
-    document.getElementById("countdown").innerHTML = seconds + "s";
-
-    if (seconds <= 0) {
-      clearInterval(countdownTimer);
-      document.getElementById("countdown").innerHTML = "the next paragraph.";
-      document.getElementById("bazinga").innerHTML = "BAZINGA!";
-    }
-  }, 100); // 1000 makes this a 60s
-}
+//         if (seconds <= 0) {
+//             clearInterval(countdownTimer);
+//             document.getElementById("countdown").innerHTML = "Time's up!";
+//         }
+//     }, 1000); // 1000 makes this a 60s
+// }
 
 function compare(computerAction) {
     if (playerAction === computerAction) {
@@ -132,32 +141,49 @@ function compare(computerAction) {
     }
 }
 
-/*function winner() {
-    if (computerTally > playerTally) {
-        return "Bazinga, the computer won the game!";
-    } else if (computerTally === playerTally) {
-        return "It's a draw!"
-    } else {
-        return "Eureka, congrats, you won the game!";
-    }
+let countdownTimer; // Declare countdownTimer as a global variable
+
+function countdown() {
+    var seconds = 60; // Number of seconds to count down
+
+    clearInterval(countdownTimer); // Clear any existing countdown timer
+    countdownTimer = setInterval(function() {
+        seconds--;
+
+        document.getElementById("countdown").innerHTML = seconds + "s";
+
+        if (seconds <= 0) {
+            clearInterval(countdownTimer);
+            document.getElementById("countdown").innerHTML = "Time's up!";
+        }
+    }, 1000); // 1000 makes this a 60s
+    
+    return countdownTimer; // Return the interval ID
 }
-*/
+
 function resetGame() {
     roundsPlayed = 0;
     playerTally = 0;
     computerTally = 0;
     round = 0;
+    
+    // Clear result and overall result
     document.querySelector(".result").innerHTML = "";
     document.querySelector(".overall-result").innerHTML = "";
+    
+    // Reset tallies
     document.getElementById("playerTally").innerHTML = "0";
     document.getElementById("computerTally").innerHTML = "0";
+    
+    // Clear previous countdown timer if it exists
+    clearInterval(countdownTimer);
+    
+    // Reset the countdown timer immediately to 60s
+    document.getElementById("countdown").innerHTML = "60s"; // Reset timer display
+    countdownTimer = countdown(); // Start the timer again and store its reference
 }
 
-function updateProgressBar() {
-    const progressBarFill = document.getElementById("progressBarFill");
-    const progress = (roundsPlayed / maxRounds) * 100;
-    progressBarFill.style.width = progress + "%";
-}
+
 
 function displayOverallWinner() {
     if (computerTally > playerTally) {
