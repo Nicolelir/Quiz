@@ -54,14 +54,16 @@
 </header>
 
 <body>
-    <div class="game-area">
-        <div class="controls-area">
-            <button data-type="lightning" class="btn btn-lg btn--blue" id="lightning">Lightning</button>
-            <button data-type="normal" class="btn btn-lg btn--blue" id="normal">Normal</button>
-            <button data-type="difficult" class="btn btn-lg btn--blue" id="difficult">Difficult</button>
-        </div>
-    </div>
-    </div>
+
+    <h1>
+        Choose a Mode
+    </h1>
+
+    <div class="d-grid gap-2 col-6 mx-auto" id="lvl-btns">
+        <button class="btn btn-success" type="button" ><a href="normal.html" style="text-decoration: none">Normal</a></button>
+        <button class="btn btn-warning" type="button"><a href="lightning.html" style="text-decoration: none">Lightning</a></button>
+        <button class="btn btn-danger" type="button"><a href="difficult.html" style="text-decoration: none">Difficult</a></button>
+      </div>
 
     <!--CDN js and script.js-->
     <script src="assets/js/levels.js"></script>

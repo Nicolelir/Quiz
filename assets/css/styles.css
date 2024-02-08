@@ -64,4 +64,8 @@ body {
     transition: width 0.3s ease;
 }
 
+#lvl-btns {
+  justify-content: center;
+  text-decoration: none;
+}
   
