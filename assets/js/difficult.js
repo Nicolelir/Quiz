@@ -19,20 +19,26 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (this.getAttribute("id") === "resetButton") {
                 resetGame();
             } else {
-                if (roundsPlayed < maxRounds) {
+                if (roundsPlayed < maxRounds && playerTally < 3 && computerTally < 3) {
                     let gameType = this.getAttribute("data-type");
                     runGame(gameType);
                     roundsPlayed++;
                     updateProgressBar();
                 }
 
-                if (roundsPlayed === maxRounds) {
+                if (playerTally >= 3 || computerTally >= 3 || roundsPlayed === maxRounds) {
                     displayOverallWinner();
+                    
+                    // Update result display
+                    let result = compare(computerAction).toUpperCase();
+                    document.querySelector(".result").innerHTML = "<h3>User/Computer:</h3><p>User: " + playerAction.toUpperCase() +
+                        "<br>" + "Computer: " + computerAction.toUpperCase() + "</p>" + "<p>" + result + "</p>";
                 }
             }
         });
     }
 });
+
 
 function runGame(gameType) {
     playerAction = gameType;
@@ -49,11 +55,16 @@ function runGame(gameType) {
         case 4: computerAction = "spock";
             break;
     }
-
     var result = compare(computerAction).toUpperCase();
-
     document.querySelector(".result").innerHTML = "<h3>User/Computer:</h3><p>User: " + playerAction.toUpperCase() +
         "<br>" + "Computer: " + computerAction.toUpperCase() + "</p>" + "<p>" + result + "</p>";
+
+    // Update scores based on the result
+    if (result.includes("WON")) {
+        resultsTally("player");
+    } else if (result.includes("LOST")) {
+        resultsTally("computer");
+    }
 
     return result; // Return the result for updating scores
 }
@@ -114,16 +125,6 @@ function compare(computerAction) {
     }
 }
 
-/*function winner() {
-    if (computerTally > playerTally) {
-        return "Bazinga, the computer won the game!";
-    } else if (computerTally === playerTally) {
-        return "It's a draw!"
-    } else {
-        return "Eureka, congrats, you won the game!";
-    }
-}
-*/
 function resetGame() {
     roundsPlayed = 0;
     playerTally = 0;
@@ -157,9 +158,16 @@ function resultsTally(winner) {
     round++;
     if (winner === "player") {
         playerTally++;
-        document.getElementById("playerTally").innerHTML = playerTally;
     } else if (winner === "computer") {
         computerTally += 2;
-        document.getElementById("computerTally").innerHTML = computerTally;
     }
+
+    // Update the scores display
+    document.getElementById("playerScore").innerText = playerTally;
+    document.getElementById("computerScore").innerText = computerTally;
+
+    console.log("Player score:", playerTally);
+    console.log("Computer score:", computerTally);
 }
+
+
