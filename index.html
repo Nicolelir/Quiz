@@ -16,16 +16,60 @@
      <!--styles.css-->
      <link rel="stylesheet" href="assets/css/styles.css">
      <title>Rock Paper Scissors Lizard Spock</title>
+
+     <style>
+        .controls-area {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .jagged-shape {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+            position: relative;
+            background-color: #333;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            transition: clip-path 0.10s ease-in-out;
+            overflow: hidden;
+        }
+
+        .jagged-shape::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("pngaaa.com-12631.png");
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            transform: scale(1);
+        }
+
+        .jagged-shape:hover::before {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        .jagged-shape:hover {
+            clip-path: polygon(20% 0%, 85% 25%, 100% 100%, 0 90%);
+            rotate: 15deg;
+        }
+    </style>
  </head>
  
  <body>
     <div class="game-area"> 
         <div class="controls-area">
-        <button data-type="rock" class= "btn btn-lg btn--blue" id="rock"></button>
-        <button data-type="paper" class="btn btn-lg btn--blue" id="paper"></button>
-        <button data-type="scissors" class="btn btn-lg btn--blue" id="scissors"></button>
-        <button data-type="lizard" class="btn btn-lg btn--blue" id="lizard"></button>
-        <button data-type="spock" class="btn btn-lg btn--blue" id="spock"></button>
+        <button data-type="rock" class= "jagged-shape" id="rock"></button>
+        <button data-type="paper" class="jagged-shape" id="paper"></button>
+        <button data-type="scissors" class="jagged-shape" id="scissors"></button>
+        <button data-type="lizard" class="jagged-shape" id="lizard"></button>
+        <button data-type="spock" class="jagged-shape" id="spock"></button>
         <button id="resetButton">Reset</button>
     </div>      
     <div class="result"></div>
@@ -35,6 +79,9 @@
     <div class="progress-bar-fill" id="progressBarFill"></div>
     </div>
     </div>
+
+    <a href="intro.html">Intro</a>
+    <a href="modal.html">Modal</a>
 
  <!--CDN js and script.js-->    
  <script src="assets/js/script.js"></script>

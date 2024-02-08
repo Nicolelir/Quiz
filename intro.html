@@ -23,6 +23,8 @@
     <!-- Favicon -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
+    <script src="https://unpkg.com/swup@4"></script>
+
     <style>
         body {
             margin: 0;
@@ -31,22 +33,27 @@
             color: #ffffff;
             filter: blur(0);
             transition: filter background-color 0.5s ease, color 0.5s ease;
+            font-size: 16px;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
         }
 
         .slam-container {
             position: relative;
-            margin-top: 150px;
+            margin-top: 1.5em;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            margin-top: 200px;
             transition: transform 0.5s ease;
         }
 
         .slam-paragraph {
             text-transform: uppercase;
-            transform: translateY(-50px);
-            padding: 5px 0;
+            transform: translateY(-0.5em);
+            padding: 0.3em 0;
             opacity: 0;
             transition: opacity 0.5s, transform 0.5s;
         }
@@ -54,31 +61,31 @@
         .rockParagraph {
             font-family: 'Bahnschrift';
             font-weight: bold;
-            font-size: 6.5vw;
+            font-size: 2.7em;
         }
 
         .paperParagraph {
             font-family: 'Bahnschrift';
             font-weight: lighter;
-            font-size: 5vw;
-            letter-spacing: 0.1vw;
+            font-size: 2em;
+            letter-spacing: 0.05em;
         }
 
         .scissorsParagraph {
             font-family: 'Times New Roman', Times, serif;
-            font-size: 3.6vw;
+            font-size: 1.45em;
         }
 
         .lizardParagraph {
             font-family: 'Brush Script MT', cursive;
-            font-size: 4.1vw;
+            font-size: 1.7em;
         }
 
         .spockParagraph {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.7vw;
+            font-size: 1.5em;
             font-weight: 100;
-            letter-spacing: 0.2vw;
+            letter-spacing: 0.1em;
         }
 
         #overlay {
@@ -89,7 +96,6 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(10px);
             z-index: 3;
             opacity: 0;
             transition: opacity 0.3s ease;
@@ -114,8 +120,27 @@
         }
 
         #introMenu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            transition: clip-path 0.10s ease-in-out;
+            overflow: hidden;
             opacity: 0;
             transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .btn-primary {
+            border-radius: 25px;
+            /* Make buttons more rounded */
+            padding: 15px 25px;
+            /* Add padding to buttons */
+        }
+
+        .btn-primary a {
+            color: #fff;
+            text-decoration: none;
         }
     </style>
 
@@ -134,39 +159,46 @@
 
     <br>
 
+    <div id="overlay">
+        <div id="square">
+            <img src="https://camo.githubusercontent.com/798579b60dd20b6ce55a9e353429f11a557668dc160f1b525fed598794c44f3a/68747470733a2f2f7374617469632e7769787374617469632e636f6d2f6d656469612f3930333035365f33396161393532336337306134323836383462653937343435383062306231627e6d76322e706e672f76312f6669742f775f313030302c685f313030302c616c5f632c715f38302f66696c652e706e67"
+                alt="Sheldon">
+            <span class="tutorialText">It's like rock, paper, and scissors - but quirky!</span>
+        </div>
+    </div>
+
+    <br>
+
     <div id="introMenu">
         <div>
             <button id="openButton" type="button" class="btn btn-block btn-primary">
                 HOW TO
             </button>
 
-            <div id="overlay">
-                <div id="square">
-                    <img src="https://e7.pngegg.com/pngimages/189/529/png-clipart-sheldon-cooper-the-big-bang-theory-meme-jim-parsons-english-grammar-the-big-bang-theory-face-head-thumbnail.png"
-                        alt="Sheldon">
-                    <span class="tutorialText">It's like rock, paper, and scissors - but quirky!</span>
-                </div>
-            </div>
+
         </div>
         <div>
-            <button type="button" class="btn btn-block btn-primary">
+            <button id="playButton" type="button" class="btn btn-block btn-primary">
                 <a href="index.html" style="color: #fff; text-decoration: none;">PLAY</a>
             </button>
+
         </div>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const openButton = document.getElementById("openButton");
+            const playButton = document.getElementById("playButton");
             const overlay = document.getElementById("overlay");
             const body = document.body;
-    
+            const swup = new Swup();
+
             // Define an array of preferred text colors
             const preferredTextColors = ["#fff", "#000"];
-    
+
             // Run the colour change animation
             changeColors();
-    
+
             openButton.addEventListener("click", function (event) {
                 event.stopPropagation(); // Prevents the click event from reaching the document
                 overlay.style.display = "block";
@@ -174,7 +206,7 @@
                     overlay.style.opacity = "1";
                 }, 10);
             });
-    
+
             document.addEventListener("click", function (event) {
                 if (overlay.style.display === "block" && event.target.id !== "overlay") {
                     overlay.style.opacity = "0";
@@ -183,21 +215,21 @@
                     }, 300);
                 }
             });
-    
+
             function changeColors() {
                 const paragraphs = document.querySelectorAll(".slam-paragraph");
                 const slamContainer = document.querySelector(".slam-container");
                 const introMenu = document.querySelector("#introMenu");
-    
+
                 paragraphs.forEach((paragraph, index) => {
                     setTimeout(() => {
                         paragraph.style.opacity = "1";
                         paragraph.style.transform = "scale(3.0)";
-    
+
                         // Change background and font colour dynamically during the first part
                         body.style.backgroundColor = getRandomColor();
                         body.style.color = getRandomTextColor();
-    
+
                         if (index === paragraphs.length - 1) {
                             // Store the final colours
                             finalBackgroundColor = body.style.backgroundColor;
@@ -205,19 +237,19 @@
                         }
                     }, index * 500);
                 });
-    
+
                 setTimeout(() => {
                     // Move the entire container up by 100px
                     slamContainer.style.transform = "translateY(-100px)";
                     introMenu.style.opacity = "1";
                     introMenu.style.transform = "translateY(-100px)";
-    
+
                     // Change background and font colour to specific values in the second part
                     body.style.backgroundColor = "#333333";
                     body.style.color = "#ffffff";
                 }, paragraphs.length * 500 + 1000);
             }
-    
+
             function getRandomColor() {
                 // Function to generate a random colour
                 const letters = "0123456789ABCDEF";
@@ -227,14 +259,16 @@
                 }
                 return color;
             }
-    
+
             function getRandomTextColor() {
                 // Function to get a random text colour from the preferred colors array
                 return preferredTextColors[Math.floor(Math.random() * preferredTextColors.length)];
             }
+
+            
         });
     </script>
-    
+
 </body>
 
 </html>
