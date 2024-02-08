@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 checkAnswer();
             } else if (this.getAttribute("id") === "resetButton") {
                 resetGame();
+                countdown();
             } else {
                 if (roundsPlayed < maxRounds) {
                     let gameType = this.getAttribute("data-type");
