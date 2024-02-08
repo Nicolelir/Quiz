@@ -58,6 +58,24 @@ function runGame(gameType) {
     return result; // Return the result for updating scores
 }
 
+//Countdown Timer Reference 
+
+function countdown() {
+  var seconds = 60; // Number of seconds to count down
+
+  var countdownTimer = setInterval(function() {
+    seconds--;
+
+    document.getElementById("countdown").innerHTML = seconds + "s";
+
+    if (seconds <= 0) {
+      clearInterval(countdownTimer);
+      document.getElementById("countdown").innerHTML = "the next paragraph.";
+      document.getElementById("bazinga").innerHTML = "BAZINGA!";
+    }
+  }, 100); // 1000 makes this a 60s
+}
+
 function compare(computerAction) {
     if (playerAction === computerAction) {
         return "Snap! It's a draw!";
