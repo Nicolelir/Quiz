@@ -9,9 +9,26 @@ let playerTally = 0;
 let computerTally = 0;
 let round = 0;
 
-document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
 
+// ---Game lvl buttons---
+
+document.getElementById("lightning").addEventListener("click", function() {
+    runGame(gameType);
+    countdown();
+});
+
+document.getElementById("normal").addEventListener("click", function() {
+    runGame(gameType);
+});
+
+document.getElementById("difficult").addEventListener("click", function() {
+    runGame(gameType);
+    if (result === 'Bazinga, you lost!') {
+        computerTally += 2;
+    }
+});
+
+  let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "submit") {
@@ -32,6 +49,27 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+	let buttons = document.getElementsByTagName("button");
+	for (let button of buttons) {
+		button.addEventListener("click", function () {
+			if (this.getAttribute("data-type") === "submit") {
+				checkAnswer();
+			} else {
+				if (roundsPlayed < maxRounds) {
+					let gameType = this.getAttribute("data-type");
+					runGame(gameType);
+					roundsPlayed++;
+				}
+				if (roundsPlayed === maxRounds) {
+					displayOverallWinner();
+				}
+			}
+		});
+	}
 });
 
 function runGame(gameType) {
