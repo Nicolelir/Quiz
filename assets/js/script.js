@@ -3,25 +3,25 @@
 
 //random function
 function runGame(gameType) {
-	userChoice = gameType;
-	computerChoice = Math.floor(Math.random() * 5);
-	switch (computerChoice) {
-		case 0: computerChoice = "rock";
+	playerAction = gameType;
+	computerAction = Math.floor(Math.random() * 5);
+	switch (computerAction) {
+		case 0: computerAction = "rock";
 			break;
-		case 1: computerChoice = "paper";
+		case 1: computerAction = "paper";
 			break;
-		case 2: computerChoice = "scissors";
+		case 2: computerAction = "scissors";
 			break;
-		case 3: computerChoice = "lizard";
+		case 3: computerAction = "lizard";
 			break;
-		case 4: computerChoice = "spock";
+		case 4: computerAction = "spock";
 			break;
 	}
 
-	var result = compare(computerChoice).toUpperCase();
+	var result = compare(computerAction).toUpperCase();
 
-	document.querySelector(".result").innerHTML = "<h3>User/Computer:</h3><p>User: " + userChoice.toUpperCase() +
-		"<br>" + "Computer: " + computerChoice.toUpperCase() + "</p>" + "<p>" + result + "</p>";
+	document.querySelector(".result").innerHTML = "<h3>User/Computer:</h3><p>User: " + playerAction.toUpperCase() +
+		"<br>" + "Computer: " + computerAction.toUpperCase() + "</p>" + "<p>" + result + "</p>";
 }
 
 // 3 rounds function
@@ -30,62 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	let roundsPlayed = 0;
     const maxRounds = 3;
 
-//compare user/computer choises
-function compare(comChoice) {
-	if (userChoice === comChoice) {
-    return "";
-	} else if (userChoice === "rock") {
-		if (comChoice === "paper") {
-      return "";
-		} else if (comChoice === "scissors") {
-      return "";
-		} else if (comChoice === "lizard") {
-			return "";
-		} else {
-			return "";
-		}
-	} else if (userChoice === "paper") {
-		if (comChoice === "rock") {
-			return "";
-		} else if (comChoice === "scissors") {
-			return "";
-		} else if (comChoice === "lizard") {
-			return "";
-		} else {
-			return "";
-		}
-	}else if (userChoice === "scissors") {
-		if (comChoice === "rock") {
-			return "";
-		} else if (comChoice === "paper") {
-			return "";
-		} else if (comChoice === "lizard") {
-			return "";
-		} else {
-			return "";
-		}
-	} else if (userChoice === "lizard") {
-		if (comChoice === "rock") {
-			return "";
-		} else if (comChoice === "paper") {
-			return "";
-		} else if (comChoice === "scissors") {
-			return "";
-		} else {
-			return "";
-		}
-	} else if (userChoice === "spock") {
-		if (comChoice === "rock") {
-			return "";
-		} else if (comChoice === "paper") {
-			return "";
-		} else if (comChoice === "scissors") {
-			return "";
-		} else {
-			return "";
-		}
-	}
-};
 
 	for (let button of buttons) {
         button.addEventListener("click", function() {
