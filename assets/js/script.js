@@ -1,5 +1,6 @@
 let userChoice;
 let computerChoice;
+let overallResult = 0;
 let roundsPlayed = 0;
 const maxRounds = 3;
 let playerAction;
@@ -7,7 +8,7 @@ let computerAction;
 let playerTally = 0;
 let computerTally = 0;
 let round = 0;
-let overallResult = 0;
+
 
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
@@ -22,7 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     let gameType = this.getAttribute("data-type");
                     runGame(gameType);
                     roundsPlayed++;
+                    updateProgressBar();
                 }
+
                 if (roundsPlayed === maxRounds) {
                     displayOverallWinner();
                 }
@@ -124,6 +127,12 @@ function resetGame() {
     document.querySelector(".overall-result").innerHTML = "";
     document.getElementById("playerTally").innerHTML = "0";
     document.getElementById("computerTally").innerHTML = "0";
+}
+
+function updateProgressBar() {
+    const progressBarFill = document.getElementById("progressBarFill");
+    const progress = (roundsPlayed / maxRounds) * 100;
+    progressBarFill.style.width = progress + "%";
 }
 
 function displayOverallWinner() {
