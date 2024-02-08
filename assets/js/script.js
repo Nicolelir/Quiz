@@ -11,10 +11,11 @@ let round = 0;
 
 
 // ---Game lvl buttons---
-
+/*
 document.getElementById("lightning").addEventListener("click", function() {
     runGame(gameType);
     countdown();
+	console.log(test);
 });
 
 document.getElementById("normal").addEventListener("click", function() {
@@ -27,6 +28,7 @@ document.getElementById("difficult").addEventListener("click", function() {
         computerTally += 2;
     }
 });
+*/
 
   let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
@@ -42,15 +44,12 @@ document.getElementById("difficult").addEventListener("click", function() {
                     roundsPlayed++;
 					updateProgressBar();
                 }
-
                 if (roundsPlayed === maxRounds) {
                     displayOverallWinner();
                 }
             }
         });
     }
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
 	let buttons = document.getElementsByTagName("button");
@@ -87,14 +86,13 @@ function runGame(gameType) {
         case 4: computerAction = "spock";
             break;
     }
+            var result = compare(computerAction).toUpperCase();
+            document.querySelector(".result").innerHTML = "<h3>User/Computer:</h3><p>User: " + playerAction.toUpperCase() +
+                "<br>" + "Computer: " + computerAction.toUpperCase() + "</p>" + "<p>" + result + "</p>";
+            // Assuming you have a function called updateScores to handle the result
+            updateScores(result);
+        };
 
-    var result = compare(computerAction).toUpperCase();
-
-    document.querySelector(".result").innerHTML = "<h3>User/Computer:</h3><p>User: " + playerAction.toUpperCase() +
-        "<br>" + "Computer: " + computerAction.toUpperCase() + "</p>" + "<p>" + result + "</p>";
-
-    return result; // Return the result for updating scores
-}
 
 function compare(computerAction) {
     if (playerAction === computerAction) {
