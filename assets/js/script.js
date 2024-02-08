@@ -7,6 +7,8 @@ let computerAction;
 let playerTally = 0;
 let computerTally = 0;
 let round = 0;
+let overallResult = 0;
+
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
