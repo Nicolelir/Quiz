@@ -1,11 +1,13 @@
-# <p style="text-align: center;"></p>
+# <p style="text-align: center;">Rock, Paper, Scissors, Lizard, Spock</p>
 
 ![Image]()
 
-
 [Click here to view the live web application]()
 
+The classic rock, paper, scissors game including the variation of lizard and Spock. This is an interactive front-end site that provides entertainment for people of all ages because of its straightforward rules and clear messaging.
+Users will be able to play a fun and entertaining game of Rock Paper Scissor Lizard Spock against the computer and, after three rounds, see a clear message on who the winner is. 
 
+Not sure what Rock, Paper, Scissors, Lizard, Spock is? [Check out this clip from The Big Bang Theory](https://www.youtube.com/watch?v=iSHPVCBsnLw)
 
 ## Index - Table of Content
 
@@ -36,6 +38,16 @@
 
 
 ## Design
+
+Wireframes were created using Balsamiq:
+
+- Desktop layout
+- Tablet layout
+- Smartphone layout
+
+Color Scheme
+
+Typography
 
 ## Technologies Used
 
@@ -75,8 +87,38 @@
 
 ## Features
 
-## Features Left to Implement
+### The Rules
 
+1.	Open the website and view the header section with the logo and game title.
+2.	In the "---------------" section, you'll find buttons for Rock, Paper, Scissors, Spock, and Lizard.
+3.	Click on one of the buttons to select your move. The computer will automatically make its move.
+The rules are:
+- Scissors beats Paper
+- Paper beats Rock
+- Rock beats Lizard
+- Lizard beats Spock
+- Spock beats Scissors
+- Scissors beats Lizard
+- Paper beats Spock
+- Rock beats Scissors
+- Lizard beats Paper
+- Spock beats Rock
+
+4.	The result of each round will be displayed in the ------------ section, showing both choices and the outcome.
+5.	The Progress Bar will keep track of your rounds and after 3 rounds the winner will be displayed on the screen
+
+
+### Heading, the title of the page 
+### Player choises
+### Player versus computer
+### Timer
+### Declaration of the winner 
+### Replay the game
+
+At the end of the game, a "Play again " button will be available. You can click this button if you want to play the game again and enjoy another round of Rock, Paper, Scissors, Lizard, Spock!
+
+
+## Features Left to Implement
 
 
 ## Testing
@@ -88,6 +130,8 @@
 - CSS
 
 - JavaScript
+
+### Accessibility
      
 ### Browser Compatibility
 
@@ -100,6 +144,8 @@ The site was tested on the following browsers
 
 
 ## Deployment 
+
+### Bugs Fixed
 
 ### GitHub Pages
 
