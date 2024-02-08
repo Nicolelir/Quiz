@@ -35,14 +35,74 @@
             overflow: hidden;
         }
 
-        .jagged-shape::before {
+        .jagged-shape-rock::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url("pngaaa.com-12631.png");
+            background-image: url("assets/images/Pixel-rock.png");
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            transform: scale(1);
+        }
+
+        .jagged-shape-paper::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("assets/images/Pixel-paper.png");
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            transform: scale(1);
+        }
+
+        .jagged-shape-scissors::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("assets/images/Pixel-scissors.png");
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            transform: scale(1);
+        }
+
+        .jagged-shape-lizard::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("assets/images/Pixel-lizard.png");
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            transform: scale(1);
+        }
+
+        .jagged-shape-spock::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("assets/images/Pixel-spock.png");
             background-size: cover;
             background-position: center;
             opacity: 0;
@@ -65,11 +125,11 @@
  <body>
     <div class="game-area"> 
         <div class="controls-area">
-        <button data-type="rock" class= "jagged-shape" id="rock"></button>
-        <button data-type="paper" class="jagged-shape" id="paper"></button>
-        <button data-type="scissors" class="jagged-shape" id="scissors"></button>
-        <button data-type="lizard" class="jagged-shape" id="lizard"></button>
-        <button data-type="spock" class="jagged-shape" id="spock"></button>
+        <button data-type="rock" class= "jagged-shape jagged-shape-rock" id="rock"></button>
+        <button data-type="paper" class="jagged-shape jagged-shape-paper" id="paper"></button>
+        <button data-type="scissors" class="jagged-shape jagged-shape-scissors" id="scissors"></button>
+        <button data-type="lizard" class="jagged-shape jagged-shape-lizard" id="lizard"></button>
+        <button data-type="spock" class="jagged-shape jagged-shape-spock" id="spock"></button>
         <button id="resetButton">Reset</button>
     </div>      
     <div class="result"></div>
