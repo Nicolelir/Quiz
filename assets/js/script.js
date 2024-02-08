@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
+            } else if (this.getAttribute("id") === "resetButton") {
+                resetGame();
             } else {
                 if (roundsPlayed < maxRounds) {
                     let gameType = this.getAttribute("data-type");
@@ -113,6 +115,17 @@ function compare(computerAction) {
     }
 }
 */
+function resetGame() {
+    roundsPlayed = 0;
+    playerTally = 0;
+    computerTally = 0;
+    round = 0;
+    document.querySelector(".result").innerHTML = "";
+    document.querySelector(".overall-result").innerHTML = "";
+    document.getElementById("playerTally").innerHTML = "0";
+    document.getElementById("computerTally").innerHTML = "0";
+}
+
 function displayOverallWinner() {
     if (computerTally > playerTally) {
         overallResult = "Bazinga, the computer won the game!";
