@@ -24,9 +24,18 @@
             justify-content: center;
         }
 
+        .buttonText {
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 36px;
+            font-family: 'Bahnschrift';
+            font-weight: bolder;
+            text-shadow:2.5px 2.5px 0px #eb452b;
+        }
+
         .jagged-shape {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             margin: 10px;
             position: relative;
             background-color: #333;
@@ -125,13 +134,13 @@
  <body>
     <div class="game-area"> 
         <div class="controls-area">
-        <button data-type="rock" class= "jagged-shape jagged-shape-rock" id="rock"></button>
-        <button data-type="paper" class="jagged-shape jagged-shape-paper" id="paper"></button>
-        <button data-type="scissors" class="jagged-shape jagged-shape-scissors" id="scissors"></button>
-        <button data-type="lizard" class="jagged-shape jagged-shape-lizard" id="lizard"></button>
-        <button data-type="spock" class="jagged-shape jagged-shape-spock" id="spock"></button>
-        <button id="resetButton">Reset</button>
-    </div>      
+        <button data-type="rock" class= "jagged-shape jagged-shape-rock" id="rock"><span class="buttonText">Rock</span></button>
+        <button data-type="paper" class="jagged-shape jagged-shape-paper" id="paper"><span class="buttonText">Paper</span></button>
+        <button data-type="scissors" class="jagged-shape jagged-shape-scissors" id="scissors"><span class="buttonText">Scissors</span></button>
+        <button data-type="lizard" class="jagged-shape jagged-shape-lizard" id="lizard"><span class="buttonText">Lizard</span></button>
+        <button data-type="spock" class="jagged-shape jagged-shape-spock" id="spock"><span class="buttonText">Spock</span></button>
+    </div>
+    <button id="resetButton">Reset</button>      
     <div class="result"></div>
     <div class="overall-result"></div>
     <div class="progress-bar-container">
