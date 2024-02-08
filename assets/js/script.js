@@ -1,5 +1,6 @@
 let userChoice;
 let computerChoice;
+let overallResult = 0;
 let roundsPlayed = 0;
 const maxRounds = 3;
 let playerAction;
@@ -7,10 +8,11 @@ let computerAction;
 let playerTally = 0;
 let computerTally = 0;
 let round = 0;
-let overallResult = 0;
+
 
 // ---Game lvl buttons---
 document.addEventListener("DOMContentLoaded", function () {
+
 	let buttons = document.getElementsByTagName("button");
 	for (let button of buttons) {
 		button.addEventListener("click", function () {
@@ -31,6 +33,28 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		});
 	}
+
+  let buttons = document.getElementsByTagName("button");
+    for (let button of buttons) {
+        button.addEventListener("click", function () {
+            if (this.getAttribute("data-type") === "submit") {
+                checkAnswer();
+            } else if (this.getAttribute("id") === "resetButton") {
+                resetGame();
+            } else {
+                if (roundsPlayed < maxRounds) {
+                    let gameType = this.getAttribute("data-type");
+                    runGame(gameType);
+                    roundsPlayed++;
+                    updateProgressBar();
+                }
+
+                if (roundsPlayed === maxRounds) {
+                    displayOverallWinner();
+                }
+            }
+        });
+    }
 });
 
 
@@ -140,6 +164,23 @@ function compare(computerAction) {
 	}
 }
 */
+function resetGame() {
+    roundsPlayed = 0;
+    playerTally = 0;
+    computerTally = 0;
+    round = 0;
+    document.querySelector(".result").innerHTML = "";
+    document.querySelector(".overall-result").innerHTML = "";
+    document.getElementById("playerTally").innerHTML = "0";
+    document.getElementById("computerTally").innerHTML = "0";
+}
+
+function updateProgressBar() {
+    const progressBarFill = document.getElementById("progressBarFill");
+    const progress = (roundsPlayed / maxRounds) * 100;
+    progressBarFill.style.width = progress + "%";
+}
+
 function displayOverallWinner() {
 	if (computerTally > playerTally) {
 		overallResult = "Bazinga, the computer won the game!";
