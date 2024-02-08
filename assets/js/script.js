@@ -1,6 +1,6 @@
 let userChoice;
 let computerChoice;
-let overallResult = 0;
+let overallResult;
 let roundsPlayed = 0;
 const maxRounds = 3;
 let playerAction;
@@ -9,66 +9,29 @@ let playerTally = 0;
 let computerTally = 0;
 let round = 0;
 
+document.addEventListener("DOMContentLoaded", function () {
+    let buttons = document.getElementsByTagName("button");
 
-// ---Game lvl buttons---
-/*
-document.getElementById("lightning").addEventListener("click", function() {
-    runGame(gameType);
-    countdown();
-	console.log(test);
-});
-
-document.getElementById("normal").addEventListener("click", function() {
-    runGame(gameType);
-});
-
-document.getElementById("difficult").addEventListener("click", function() {
-    runGame(gameType);
-    if (result === 'Bazinga, you lost!') {
-        computerTally += 2;
-    }
-});
-*/
-
-  let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
-			} else if (this.getAttribute("id") === "resetButton") {
+            } else if (this.getAttribute("id") === "resetButton") {
                 resetGame();
             } else {
                 if (roundsPlayed < maxRounds) {
                     let gameType = this.getAttribute("data-type");
                     runGame(gameType);
                     roundsPlayed++;
-					updateProgressBar();
+                    updateProgressBar();
                 }
+
                 if (roundsPlayed === maxRounds) {
                     displayOverallWinner();
                 }
             }
         });
     }
-
-document.addEventListener("DOMContentLoaded", function () {
-	let buttons = document.getElementsByTagName("button");
-	for (let button of buttons) {
-		button.addEventListener("click", function () {
-			if (this.getAttribute("data-type") === "submit") {
-				checkAnswer();
-			} else {
-				if (roundsPlayed < maxRounds) {
-					let gameType = this.getAttribute("data-type");
-					runGame(gameType);
-					roundsPlayed++;
-				}
-				if (roundsPlayed === maxRounds) {
-					displayOverallWinner();
-				}
-			}
-		});
-	}
 });
 
 function runGame(gameType) {
@@ -86,13 +49,14 @@ function runGame(gameType) {
         case 4: computerAction = "spock";
             break;
     }
-            var result = compare(computerAction).toUpperCase();
-            document.querySelector(".result").innerHTML = "<h3>User/Computer:</h3><p>User: " + playerAction.toUpperCase() +
-                "<br>" + "Computer: " + computerAction.toUpperCase() + "</p>" + "<p>" + result + "</p>";
-            // Assuming you have a function called updateScores to handle the result
-            updateScores(result);
-        };
 
+    var result = compare(computerAction).toUpperCase();
+
+    document.querySelector(".result").innerHTML = "<h3>User/Computer:</h3><p>User: " + playerAction.toUpperCase() +
+        "<br>" + "Computer: " + computerAction.toUpperCase() + "</p>" + "<p>" + result + "</p>";
+
+    return result; // Return the result for updating scores
+}
 
 function compare(computerAction) {
     if (playerAction === computerAction) {
@@ -149,6 +113,17 @@ function compare(computerAction) {
         }
     }
 }
+
+/*function winner() {
+    if (computerTally > playerTally) {
+        return "Bazinga, the computer won the game!";
+    } else if (computerTally === playerTally) {
+        return "It's a draw!"
+    } else {
+        return "Eureka, congrats, you won the game!";
+    }
+}
+*/
 function resetGame() {
     roundsPlayed = 0;
     playerTally = 0;
@@ -159,6 +134,7 @@ function resetGame() {
     document.getElementById("playerTally").innerHTML = "0";
     document.getElementById("computerTally").innerHTML = "0";
 }
+
 function updateProgressBar() {
     const progressBarFill = document.getElementById("progressBarFill");
     const progress = (roundsPlayed / maxRounds) * 100;
@@ -176,17 +152,6 @@ function displayOverallWinner() {
 
     document.querySelector(".overall-result").innerHTML = "<h2>Overall Result:</h2><p>" + overallResult + "</p>";
 }
-
-/*function winner() {
-    let overallResult;
-    if (computerTally > playerTally) {
-        return "Bazinga, the computer won the game!";
-    } else if (computerTally === playerTally) {
-        return "It's a draw!";
-    } else {
-        return "Eureka, congrats, you won the game!";
-    }
-}*/
 
 function resultsTally(winner) {
     round++;
