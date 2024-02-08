@@ -11,28 +11,47 @@ let round = 0;
 
 
 // ---Game lvl buttons---
-document.addEventListener("DOMContentLoaded", function () {
 
-	let buttons = document.getElementsByTagName("button");
-	for (let button of buttons) {
-		button.addEventListener("click", function () {
-			if (this.getAttribute("data-type") === "normal") {
-				runGame(gameType);
-			} if else {
-				if (this.getAttribute("data-type") === "lightning") {
-					runGame(gameType);
-					countdown();
-				}
-			} else {
-				if (this.getAttribute("data-type") === "difficult") {
-					runGame(gameType);
-					if (result === 'Bazinga, you lost!') {
-						computerTally += 2;
-					}
-				}
-			}
-		});
-	}
+document.getElementById("lightning").addEventListener("click", function() {
+    runGame(gameType);
+    countdown();
+});
+
+document.getElementById("normal").addEventListener("click", function() {
+    runGame(gameType);
+});
+
+document.getElementById("difficult").addEventListener("click", function() {
+    runGame(gameType);
+    if (result === 'Bazinga, you lost!') {
+        computerTally += 2;
+    }
+});
+
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+
+// 	let buttons = document.getElementsByTagName("button");
+// 	for (let button of buttons) {
+// 		button.addEventListener("click", function () {
+// 			if (this.getAttribute("data-type") === "normal") {
+// 				runGame(gameType);
+// 			} if else {
+// 				if (this.getAttribute("data-type") === "lightning") {
+// 					runGame(gameType);
+// 					countdown();
+// 				}
+// 			} else {
+// 				if (this.getAttribute("data-type") === "difficult") {
+// 					runGame(gameType);
+// 					if (result === 'Bazinga, you lost!') {
+// 						computerTally += 2;
+// 					}
+// 				}
+// 			}
+// 		});
+// 	}
 
   let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
