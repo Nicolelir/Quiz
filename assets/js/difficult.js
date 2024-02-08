@@ -159,7 +159,7 @@ function resultsTally(winner) {
         playerTally++;
         document.getElementById("playerTally").innerHTML = playerTally;
     } else if (winner === "computer") {
-        computerTally++;
+        computerTally += 2;
         document.getElementById("computerTally").innerHTML = computerTally;
     }
 }
