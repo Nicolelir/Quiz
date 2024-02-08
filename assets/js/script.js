@@ -28,31 +28,6 @@ document.getElementById("difficult").addEventListener("click", function() {
     }
 });
 
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-
-// 	let buttons = document.getElementsByTagName("button");
-// 	for (let button of buttons) {
-// 		button.addEventListener("click", function () {
-// 			if (this.getAttribute("data-type") === "normal") {
-// 				runGame(gameType);
-// 			} if else {
-// 				if (this.getAttribute("data-type") === "lightning") {
-// 					runGame(gameType);
-// 					countdown();
-// 				}
-// 			} else {
-// 				if (this.getAttribute("data-type") === "difficult") {
-// 					runGame(gameType);
-// 					if (result === 'Bazinga, you lost!') {
-// 						computerTally += 2;
-// 					}
-// 				}
-// 			}
-// 		});
-// 	}
-
   let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
         button.addEventListener("click", function () {
@@ -74,7 +49,6 @@ document.getElementById("difficult").addEventListener("click", function() {
             }
         });
     }
-});
 
 
 
