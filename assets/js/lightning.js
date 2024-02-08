@@ -145,7 +145,7 @@ function compare(computerAction) {
 let countdownTimer; // Declare countdownTimer as a global variable
 
 function countdown() {
-    var seconds = 60; // Number of seconds to count down
+    var seconds = 30; // Number of seconds to count down
 
     clearInterval(countdownTimer); // Clear any existing countdown timer
     countdownTimer = setInterval(function() {
@@ -179,8 +179,8 @@ function resetGame() {
     // Clear previous countdown timer if it exists
     clearInterval(countdownTimer);
     
-    // Reset the countdown timer immediately to 60s
-    document.getElementById("countdown").innerHTML = "60s"; // Reset timer display
+    // Reset the countdown timer immediately to 30s
+    document.getElementById("countdown").innerHTML = "30s"; // Reset timer display
     countdownTimer = countdown(); // Start the timer again and store its reference
 }
 
