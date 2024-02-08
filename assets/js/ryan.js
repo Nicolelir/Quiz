@@ -32,7 +32,18 @@
 
 	  if (seconds <= 0) {
 		clearInterval(countdownTimer);
-		document.getElementById("countdown").innerHTML = "Expired";
+		document.getElementById("countdown").innerHTML = "the next paragraph.";
+		document.getElementById("bazinga").innerHTML = "BAZINGA!";
 	  }
-	}, 1000);
+	}, 100); // 1000 makes this a 60s
+  }
+
+  function bazingaText() {
+	document.getElementById("bazinga").innerHTML = "BAZINGA!";
+}
+
+  // You can use this to call a different function once
+  // the timer expires. 
+  function whateverFunction(){
+	console.log("placeholder");
   }
