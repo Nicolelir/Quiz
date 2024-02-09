@@ -84,7 +84,7 @@ Wireframes were created using Balsamiq. The sections below show individual wiref
 
 ### The Rules
 
-1.	Open the website and view the game title. Iwill displayed two buttons: "How to play" and "game".
+1.	Open the website and view the game title. I will displayed two buttons: "How to" and "play".
 2.	In the game section, you'll find buttons for Rock, Paper, Scissors, Spock, and Lizard. 
 3.	Click on one of the buttons to select your move. The computer will automatically make its move.
 
@@ -116,13 +116,19 @@ The previous steps detail the game in normal mode.
 
 
 ### Intro page
+"How to" and "play" buttons: 
 
+![intro](/assets/images/intro_page.png)
 
 ### Choose your level
+Choose between Normal, Lightning and Difficult level for play. 
+![choose](/assets/images/choose_a_mode.png)
 
 ### Timer
 
+
 ### Progress bar
+![bar](/assets/images/progress_bar..png)
 
 ### Declaration of the winner 
 
