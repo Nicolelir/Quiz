@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-     <!--CDN BOOTSTRAP-->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-     <!--Google fonts-->
-     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
-     <!--Font awesome-->
-     <script src="https://kit.fontawesome.com/96f1cc7a8c.js" crossorigin="anonymous"></script>
-     <!--Favicon-->
+
+    <!--CDN BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+    <!--Font awesome-->
+    <script src="https://kit.fontawesome.com/96f1cc7a8c.js" crossorigin="anonymous"></script>
+    <!--Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
-     
-     <!--styles.css-->
-     <link rel="stylesheet" href="assets/css/styles.css">
-     <title>Rock Paper Scissors Lizard Spock</title>
- </head>
+
+    <!--styles.css-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Rock Paper Scissors Lizard Spock</title>
+</head>
 
 
- 
- <body>
+
+<body>
     <header>
         <!-- ------Navbar---- -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Welcome Home</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -59,7 +61,7 @@
                 </div>
             </div>
         </nav>
-     </header>
+    </header>
 
     <div class="timer" id="timer" style="  font-size: 50px;">
         Time left: <span id="countdown">30s</span>
@@ -72,24 +74,34 @@
     </div>
     </div>
 
-<!-- Add divs for result and overall-result -->
-<div class="result"></div>
-<div class="overall-result"></div>
-    
-    <div class="game-area"> 
+    <!-- Add divs for result and overall-result -->
+    <div class="result"></div>
+    <div class="overall-result"></div>
+
+    <div class="game-area">
         <div class="controls-area">
-            <button data-type="rock" class= "btn-game" id="rock"><img class="opacity-rock" src="assets/images/pixelrock.png" alt="rock"></div></button>
-            <button data-type="paper" class="btn-game" id="paper"><img class="opacity-paper" src="assets/images/pixelpaper.png" alt="paper"></button>
-            <button data-type="scissors" class="btn-game" id="scissors"><img class="opacity-scissors" src="assets/images/pixelscissors.png" alt="scissors"></button>
-            <button data-type="lizard" class="btn-game" id="lizard"><img class="opacity-lizard" src="assets/images/pixellizard.png" alt="lizard"></button>
-            <button data-type="spock" class="btn-game" id="spock"><img class="opacity-spock" src="assets/images/pixelspock.png" alt="spock"></button>
-            <button id="resetButton" data-type="resetButton">Reset</button>
-            <button id="playAgainButton" data-type="playAgainButton" style="display: none;">Play Again</button>
-    </div>    
-    </div>  
-     
- <!--CDN js and script.js-->    
- <script src="assets/js/lightning.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+            <button data-type="rock" class="btn-game" id="rock"><img class="opacity-rock"
+                    src="assets/images/pixelrock.png" alt="rock"></button>
+        <button data-type="paper" class="btn-game" id="paper"><img class="opacity-paper"
+                src="assets/images/pixelpaper.png" alt="paper"></button>
+        <button data-type="scissors" class="btn-game" id="scissors"><img class="opacity-scissors"
+                src="assets/images/pixelscissors.png" alt="scissors"></button>
+        <button data-type="lizard" class="btn-game" id="lizard"><img class="opacity-lizard"
+                src="assets/images/pixellizard.png" alt="lizard"></button>
+        <button data-type="spock" class="btn-game" id="spock"><img class="opacity-spock"
+                src="assets/images/pixelspock.png" alt="spock"></button>
+    </div>
+    <div class="reset-btn">
+        <button id="resetButton" data-type="resetButton">Reset</button>
+        <button id="playAgainButton" data-type="playAgainButton" style="display: none;">Play Again</button>
+    </div>
+    </div>
+
+    <!--CDN js and script.js-->
+    <script src="assets/js/lightning.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
