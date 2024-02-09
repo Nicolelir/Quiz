@@ -10,7 +10,7 @@ body {
 .opacity-rock {
   height: 100%;
   width: 100%;
-  background-image: url("/assets/images/Pixel-rock.png");
+  background-image:url("https://ibb.co/C5b8Y6m");
   background-size: 50px;
   background-position: center;
   background-repeat: no-repeat;
@@ -117,6 +117,12 @@ html.is-animating .transition-fade {
   text-transform: uppercase;
   letter-spacing: 1.2px;
   color: white;
+}
+
+.btn-game {
+  height: 150px;
+  width: 150px;
+
 }
 
 .btn-lg {
