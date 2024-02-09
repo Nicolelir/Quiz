@@ -10,7 +10,7 @@ body {
 .opacity-rock {
   height: 100%;
   width: 100%;
-  background-image:url("assets/images/pixelrock.png");
+  background-image: url("/assets/images/pixelrock.png");
   background-size: 50px;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,7 +26,7 @@ body {
 .opacity-paper {
   height: 100%;
   width: 100%;
-  background-image: url("images/pixelpaper.png");
+  background-image: url("/assets/images/pixelpaper.png");
   background-size: 50px;
   background-position: center;
   background-repeat: no-repeat;
@@ -42,7 +42,7 @@ body {
 .opacity-scissors {
   height: 100%;
   width: 100%;
-  background-image: url("/images/pixelscissors.png");
+  background-image: url("/assets/images/pixelscissors.png");
   background-size: 50px;
   background-position: center;
   background-repeat: no-repeat;
@@ -58,7 +58,7 @@ body {
 .opacity-lizard {
   height: 100%;
   width: 100%;
-  background-image: url("/images/pixellizard.png");
+  background-image: url("/assets/images/pixellizard.png");
   background-size: 50px;
   background-position: center;
   background-repeat: no-repeat;
@@ -74,7 +74,7 @@ body {
 .opacity-spock {
   height: 100%;
   width: 100%;
-  background-image: url("/images/pixelspock.png");
+  background-image: url("/assets/images/pixelspock.png");
   background-size: 50px;
   background-position: center;
   background-repeat: no-repeat;

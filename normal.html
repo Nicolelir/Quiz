@@ -20,9 +20,11 @@
      <!--styles.css-->
      <link rel="stylesheet" href="assets/css/styles.css">
      <title>Rock Paper Scissors Lizard Spock</title>
+
  </head>
- 
+
  <body>
+
     <header>
         <!-- ------Navbar---- -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -58,29 +60,28 @@
             </div>
         </nav>
      </header>
+     
     <div class="game-area"> 
         <div class="controls-area">
-        <button data-type="rock" class= "btn btn-lg btn--blue" id="rock"></button>
-        <button data-type="paper" class="btn btn-lg btn--blue" id="paper"></button>
-        <button data-type="scissors" class="btn btn-lg btn--blue" id="scissors"></button>
-        <button data-type="lizard" class="btn btn-lg btn--blue" id="lizard"></button>
-        <button data-type="spock" class="btn btn-lg btn--blue" id="spock"></button>
-        <button id="reset" data-type="reset">Reset</button>
-    </div>      
+        <button data-type="rock" class= "btn btn-lg btn--blue" id="rock"><div class="opacity-rock"></div></button>
+        <button data-type="paper" class="btn btn-lg btn--blue" id="paper"><div class="opacity-paper"></div></button>
+        <button data-type="scissors" class="btn btn-lg btn--blue" id="scissors"><div class="opacity-scissors"></div></button>
+        <button data-type="lizard" class="btn btn-lg btn--blue" id="lizard"><div class="opacity-lizard"></div></button>
+        <button data-type="spock" class="btn btn-lg btn--blue" id="spock"><div class="opacity-spock"></div></button>
+        <button id="resetButton">Reset</button>
+    </div>   
+</div>    
     <div class="result"></div>
     <div class="overall-result"></div>
+    <h2>Round Progress:</h2>
     <div class="progress-bar-container">
-        <div class="progress-bar">
-            <div class="progress-bar-fill" id="progressBarFill"></div>
-         </div>
-         
-    <div id="playerTally"></div>
-    <div id="computerTally"></div>
+    <div class="progress-bar">
+    <div class="progress-bar-fill" id="progressBarFill"></div>
     </div>
     </div>
 
  <!--CDN js and script.js-->    
- <script src="assets/js/nicole.js"></script>
+ <script src="assets/js/normal.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
