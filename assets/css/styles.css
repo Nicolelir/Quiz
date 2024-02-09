@@ -165,4 +165,70 @@ html.is-animating .transition-fade {
   justify-content: center;
   text-decoration: none;
 }
-  
+
+.btn-success {
+  color: #f1f1f1;
+  border: 5px solid #E6ECF0;
+  text-decoration: none;
+}
+
+.btn-warning {
+  color: #f1f1f1;
+  border: 5px solid #E6ECF0;
+  text-decoration: none;
+}
+
+.btn-danger {
+  color: #f1f1f1;
+  border: 5px solid #E6ECF0;
+  text-decoration: none;
+}
+
+.btn-success:hover {
+  transform: scale(1.2);
+  transition: .3s ease-in-out;
+}
+
+.btn-warning:hover {
+  transform: scale(1.2);
+  border: 5px solid #ffa500;
+  transition: .3s ease-in-out;
+}
+
+.btn-danger:hover {
+  transform: scale(1.2);
+  transition: .3s ease-in-out;
+}
+
+.normallink {
+  color: #E6ECF0;
+  font-family: 'Bahnschrift';
+  font-weight: bold;
+}
+
+.lightninglink {
+  color:#E6ECF0;
+  font-family: 'Bahnschrift';
+  font-weight: bold;
+}
+
+.difficultlink {
+  color: #E6ECF0;
+  font-family: 'Bahnschrift';
+  font-weight: bold;
+}
+
+.normallink:hover {
+  transform:scale(1.5);
+  transition: .25s ease-in-out;
+}
+
+.lightninglink:hover {
+  transform:scale(1.5);
+  transition: .25s ease-in-out;
+}
+
+.difficultlink:hover {
+  transform:scale(1.5);
+  transition: .25s ease-in-out;
+}
