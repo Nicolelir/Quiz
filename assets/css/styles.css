@@ -10,6 +10,7 @@ body {
 .btn-game {
   height: 100px;
   width: 100px;
+  margin: 5px;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   border: none;
   opacity: 1;
@@ -20,22 +21,20 @@ body {
 .btn-game:hover {
     clip-path: polygon(20% 0%, 85% 25%, 100% 100%, 0 90%);
     rotate: 15deg;
+    transform: scale(1.1);
 }
 
 .opacity-rock {
   height: 100%;
   width: 100%;
-  background-image: url("/assets/images/pixelrock.png");
   background-size: 50px;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0;
 }
 
 .opacity-rock:hover {
-  opacity: 1;
-  transform: scale(1.5);
   transition: .5s ease-in-out;
+  transform: scale(1.1);
 }
 
 .opacity-paper {
@@ -45,13 +44,11 @@ body {
   background-size: 50px;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0;
 }
 
 .opacity-paper:hover {
-  opacity: 1;
-  transform: scale(1.5);
   transition: .5s ease-in-out;
+  transform: scale(1.1);
 }
 
 .opacity-scissors {
@@ -61,13 +58,11 @@ body {
   background-size: 50px;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0;
 }
 
 .opacity-scissors:hover {
-  opacity: 1;
-  transform: scale(1.5);
   transition: .5s ease-in-out;
+  transform: scale(1.1);
 }
 
 .opacity-lizard {
@@ -77,13 +72,11 @@ body {
   background-size: 50px;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0;
 }
 
 .opacity-lizard:hover {
-  opacity: 1;
-  transform: scale(1.5);
   transition: .5s ease-in-out;
+  transform: scale(1.1);
 }
 
 .opacity-spock {
@@ -93,13 +86,11 @@ body {
   background-size: 50px;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0;
 }
 
 .opacity-spock:hover {
-  opacity: 1;
-  transform: scale(1.5);
   transition: .5s ease-in-out;
+  transform: scale(1.1);
 }
 
 .game-area {
