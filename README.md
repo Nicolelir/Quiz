@@ -149,11 +149,13 @@ The full report can be viewed [here]().
 
 ### Bugs Fixed
 
+In a first version of our project we had a problem displaying the results. The results player/computer displayed "a draw" everytime the user cliked a button and the overall results was always a draw as well. This happened because the function that was supposed to count and update the scores was not working properly.
+
+![Results display](/assets/images/print%20tally%200.png)
+
 ## Deployment 
 
-
 ### GitHub Pages
-
 The site was deployed to GitHub pages. The steps to deploy are as follows: 
 
 1. In the GitHub repository, navigate to the Settings tab
