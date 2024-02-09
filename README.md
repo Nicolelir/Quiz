@@ -202,6 +202,11 @@ The project will now be cloned locally for you to use.
 - The fonts used were imported from Google Fonts.
 - The images used were imported from ---------------------------
 
+## Contribution
+
+- **Scrum Master: Nicole Elizabeth Valdes**
+- **Katie Coughlan**
+- **Ryan Ferris**
 
 ### Acknowledgements
 
