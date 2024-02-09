@@ -97,12 +97,12 @@ body {
   background-color: #E6ECF0;
   box-sizing: border-box;
   width: 100%;
-  height: 70vh;
+  height: auto;
   max-height: 650px;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10%;
+  margin-top: 15px;
   padding: 2%;
 }
 /* This code is for transition from intro page */
@@ -231,4 +231,8 @@ html.is-animating .transition-fade {
 .difficultlink:hover {
   transform:scale(1.5);
   transition: .25s ease-in-out;
+}
+
+.controls-area {
+  padding: 10px;
 }

@@ -26,59 +26,37 @@
  <body>
 
     <header>
-        <!-- ------Navbar---- -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Welcome Home</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="difficult.html">Difficult</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="lightning.html">Lightning</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="normal.html">Normal</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="levels.html">Levels</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="results.html">Results</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    
      </header>
-
-     <div class="result"></div>
-    <div class="overall-result"></div>
-    <h2>Round Progress:</h2>
-    <div class="progress-bar-container">
-    <div class="progress-bar">
-    <div class="progress-bar-fill" id="progressBarFill"></div>
-    </div>
-    </div>
+    
      
     <div class="game-area"> 
+        <h2>Round Progress:</h2>
+        <div class="progress-bar-container">
+            <div class="progress-bar">
+            <div class="progress-bar-fill" id="progressBarFill"></div>
+            </div>
+            </div>
+
         <div class="controls-area">
         <button data-type="rock" class= "btn-game" id="rock"><img class="opacity-rock" src="assets/images/pixelrock.png" alt="rock"></div></button>
         <button data-type="paper" class="btn-game" id="paper"><img class="opacity-paper" src="assets/images/pixelpaper.png" alt="paper"></button>
         <button data-type="scissors" class="btn-game" id="scissors"><img class="opacity-scissors" src="assets/images/pixelscissors.png" alt="scissors"></button>
         <button data-type="lizard" class="btn-game" id="lizard"><img class="opacity-lizard" src="assets/images/pixellizard.png" alt="lizard"></button>
         <button data-type="spock" class="btn-game" id="spock"><img class="opacity-spock" src="assets/images/pixelspock.png" alt="spock"></button>
-        <button id="resetButton">Reset</button>
-    </div>   
+
+ <!-- Existing scores div -->
+ <div class="scores">
+    <p>Player: <span id="playerScore">0</span></p>
+    <p>Computer: <span id="computerScore">0</span></p>
+</div>
+
+
+        <div class="result"></div>
+    <div class="overall-result"></div>
+    <button id="resetButton">Reset</button>
+</div>   
+    
 </div>    
     
 
