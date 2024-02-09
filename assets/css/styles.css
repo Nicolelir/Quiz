@@ -7,6 +7,21 @@ body {
 
 /* Game Button Stylings */
 
+.btn-game {
+  height: 100px;
+  width: 100px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  border: none;
+  opacity: 1;
+  background-color: #d52e3f;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-game:hover {
+    clip-path: polygon(20% 0%, 85% 25%, 100% 100%, 0 90%);
+    rotate: 15deg;
+}
+
 .opacity-rock {
   height: 100%;
   width: 100%;
@@ -117,12 +132,6 @@ html.is-animating .transition-fade {
   text-transform: uppercase;
   letter-spacing: 1.2px;
   color: white;
-}
-
-.btn-game {
-  height: 150px;
-  width: 150px;
-
 }
 
 .btn-lg {
