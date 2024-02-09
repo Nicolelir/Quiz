@@ -8,6 +8,7 @@ let computerAction;
 let playerTally = 0;
 let computerTally = 0;
 let round = 0;
+// const swup = new Swup();
 
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
