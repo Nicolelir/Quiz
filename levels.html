@@ -22,6 +22,27 @@
     <!--styles.css-->
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Rock Paper Scissors Lizard Spock</title>
+
+    <style>
+        #choosetext {
+  font-size: 3em;
+  font-family: 'Bahnschrift';
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #f3f3f3;
+  text-shadow: 2px 2px #FFA500;
+}
+
+#choosetext:hover {
+  font-size: 3em;
+  font-family: 'Bahnschrift';
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #FFA500;
+  text-shadow: 2px 2px #f3f3f3;
+}
+    </style>
+
 </head>
 
 
@@ -62,14 +83,12 @@
             </div>
         </nav>
     </header>
-    <h1>
-        Choose a Mode
-    </h1>
+    <p id="choosetext">Choose a Mode</p>
 
     <div class="d-grid gap-2 col-6 mx-auto" id="lvl-btns">
-        <button class="btn btn-success" type="button" ><a href="normal.html" style="text-decoration: none">Normal</a></button>
-        <button class="btn btn-warning" type="button"><a href="lightning.html" style="text-decoration: none">Lightning</a></button>
-        <button class="btn btn-danger" type="button"><a href="difficult.html" style="text-decoration: none">Difficult</a></button>
+        <button class="btn btn-success" type="button" ><a class ="normallink" href="normal.html" style="text-decoration: none">Normal</a></button>
+        <button class="btn btn-warning" type="button"><a class="lightninglink" href="lightning.html" style="text-decoration: none">Lightning</a></button>
+        <button class="btn btn-danger" type="button"><a class="difficultlink" href="difficult.html" style="text-decoration: none">Difficult</a></button>
       </div>
 
     <!--CDN js and script.js-->
