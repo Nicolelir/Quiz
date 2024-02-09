@@ -5,72 +5,288 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-    <!--CDN BOOTSTRAP-->
+    <!-- Google Font Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <!-- CDN BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!--Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
-    <!--Font awesome-->
-    <script src="https://kit.fontawesome.com/96f1cc7a8c.js" crossorigin="anonymous"></script>
-    
-    <!--Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
 
-    <!--styles.css-->
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/96f1cc7a8c.js" crossorigin="anonymous"></script>
+<!--Favicon-->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+
     <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Rock Paper Scissors Lizard Spock</title>
+
+    <!-- Swup Transitions -->
+    <script src="https://unpkg.com/swup@4"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #282c34;
+            color: #ffffff;
+            filter: blur(0);
+            transition: filter background-color 0.5s ease, color 0.5s ease;
+            font-size: 16px;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .slam-container {
+            position: relative;
+            margin-top: 1.5em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 200px;
+            transition: transform 0.5s ease;
+        }
+
+        .slam-paragraph {
+            text-transform: uppercase;
+            transform: translateY(-0.5em);
+            padding: 0.3em 0;
+            opacity: 0;
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .rockParagraph {
+            font-family: 'Bahnschrift';
+            font-weight: bold;
+            font-size: 2.7em;
+        }
+
+        .paperParagraph {
+            font-family: 'Bahnschrift';
+            font-weight: lighter;
+            font-size: 2em;
+            letter-spacing: 0.05em;
+        }
+
+        .scissorsParagraph {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.45em;
+        }
+
+        .lizardParagraph {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 1.7em;
+        }
+
+        .spockParagraph {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5em;
+            font-weight: 100;
+            letter-spacing: 0.1em;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 3;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        #square {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: auto;
+            height: auto;
+            padding: 10px;
+            background: #fff;
+        }
+
+        #square img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #introMenu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            transition: clip-path 0.10s ease-in-out;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .btn-primary {
+            border-radius: 25px;
+            /* Make buttons more rounded */
+            padding: 15px 25px;
+            /* Add padding to buttons */
+        }
+
+        .btn-primary a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .transition-fade {
+            transition: .4s;
+            opacity: 1;
+        }
+
+        html.is-animating .transition-fade {
+            opacity: 0;
+            transform: translateY(-100px);
+        }
+
+    </style>
+
+    <title>Intro Splash Screen</title>
 </head>
 
-
-
 <body>
-    <header>
-        <!-- ------Navbar---- -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Welcome Home</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="difficult.html">Difficult</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="lightning.html">Lightning</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="normal.html">Normal</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="levels.html">Levels</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="results.html">Results</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+<main id="swup" class="transition-fade">
+    <div class="slam-container">
+        <p class="slam-paragraph rockParagraph">Rock</p>
+        <p class="slam-paragraph paperParagraph">Paper</p>
+        <p class="slam-paragraph scissorsParagraph">Scissors</p>
+        <p class="slam-paragraph lizardParagraph">Lizard</p>
+        <p class="slam-paragraph spockParagraph">Spock</p>
+    </div>
 
-    <p>this is the home page</p>
+    <br>
 
-    <!--CDN js and script.js-->
-    <script src="assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <div id="overlay">
+        <div id="square">
+            <img src="assets/images/RockPaperScissorsLizardSpockInstructions_TextNoBG.png"
+                alt="Sheldon">
+            <span class="tutorialText">It's like rock, paper, and scissors - but quirky!</span>
+        </div>
+    </div>
+
+    <br>
+
+    <div id="introMenu">
+        <div>
+            <button id="openButton" type="button" class="btn btn-block btn-primary">
+                HOW TO
+            </button>
+
+
+        </div>
+        <div>
+            <button id="playButton" type="button" class="btn btn-block btn-primary">
+                <a href="levels.html" style="color: #fff; text-decoration: none;">PLAY</a>
+            </button>
+
+        </div>
+    </div>
+</main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const openButton = document.getElementById("openButton");
+            const playButton = document.getElementById("playButton");
+            const overlay = document.getElementById("overlay");
+            const body = document.body;
+            const swup = new Swup();
+
+            // Define an array of preferred text colors
+            const preferredTextColors = ["#fff", "#000"];
+
+            // Run the colour change animation
+            changeColors();
+
+            openButton.addEventListener("click", function (event) {
+                event.stopPropagation(); // Prevents the click event from reaching the document
+                overlay.style.display = "block";
+                setTimeout(() => {
+                    overlay.style.opacity = "1";
+                }, 10);
+            });
+
+            document.addEventListener("click", function (event) {
+                if (overlay.style.display === "block" && event.target.id !== "overlay") {
+                    overlay.style.opacity = "0";
+                    setTimeout(() => {
+                        overlay.style.display = "none";
+                    }, 300);
+                }
+            });
+
+            function changeColors() {
+                const paragraphs = document.querySelectorAll(".slam-paragraph");
+                const slamContainer = document.querySelector(".slam-container");
+                const introMenu = document.querySelector("#introMenu");
+
+                paragraphs.forEach((paragraph, index) => {
+                    setTimeout(() => {
+                        paragraph.style.opacity = "1";
+                        paragraph.style.transform = "scale(3.0)";
+
+                        // Change background and font colour dynamically during the first part
+                        body.style.backgroundColor = getRandomColor();
+                        body.style.color = getRandomTextColor();
+
+                        if (index === paragraphs.length - 1) {
+                            // Store the final colours
+                            finalBackgroundColor = body.style.backgroundColor;
+                            finalFontColor = body.style.color;
+                        }
+                    }, index * 500);
+                });
+
+                setTimeout(() => {
+                    // Move the entire container up by 100px
+                    slamContainer.style.transform = "translateY(-100px)";
+                    introMenu.style.opacity = "1";
+                    introMenu.style.transform = "translateY(-100px)";
+
+                    // Change background and font colour to specific values in the second part
+                    body.style.backgroundColor = "#d52e3f";
+                    body.style.color = "#ffffff";
+                }, paragraphs.length * 500 + 1000);
+            }
+
+            function getRandomColor() {
+                // Function to generate a random colour
+                const letters = "0123456789ABCDEF";
+                let color = "#";
+                for (let i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            function getRandomTextColor() {
+                // Function to get a random text colour from the preferred colors array
+                return preferredTextColors[Math.floor(Math.random() * preferredTextColors.length)];
+            }
+
+            
+        });
+
+
+    </script>
+
 </body>
 
 </html>
