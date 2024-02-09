@@ -10,7 +10,7 @@ body {
 .opacity-rock {
   height: 100%;
   width: 100%;
-  background-image:url('/images/pixelrock.png');
+  background-image:url("assets/images/pixelrock.png");
   background-size: 50px;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,7 +26,7 @@ body {
 .opacity-paper {
   height: 100%;
   width: 100%;
-  background-image: url("/images/pixelpaper.png");
+  background-image: url("images/pixelpaper.png");
   background-size: 50px;
   background-position: center;
   background-repeat: no-repeat;
