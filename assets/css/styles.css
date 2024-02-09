@@ -72,3 +72,9 @@ html.is-animating .transition-fade {
   background-color: #4caf50;
   transition: width 0.3s ease;
 }
+
+#lvl-btns {
+  justify-content: center;
+  text-decoration: none;
+}
+  
