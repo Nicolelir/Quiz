@@ -209,22 +209,6 @@ You can clone the repository to use locally by following these steps:
 
 The project will now be cloned locally for you to use.
 
-## Credits
-
-### Code
-
-- Bootstrap 5: Boostrap library used throughout the project for layout and responsiveness using the Bootstrap Grid System.
-- Favicon.io: Used to create the site Favicon and provided the code in the head of all pages.
-
-### Content
-
-
-
-### Media
-
-- The icons in the ----------------were taken from--------------------------
-- The fonts used were imported from Google Fonts.
-- The images used were imported from ---------------------------
 
 ## Contribution
 
