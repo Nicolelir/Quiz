@@ -133,6 +133,7 @@ function resetGame() {
     document.querySelector(".overall-result").innerHTML = "";
     document.getElementById("playerTally").innerHTML = "0";
     document.getElementById("computerTally").innerHTML = "0";
+
 }
 
 function updateProgressBar() {
