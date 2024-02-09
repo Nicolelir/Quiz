@@ -128,10 +128,17 @@
             clip-path: polygon(20% 0%, 85% 25%, 100% 100%, 0 90%);
             rotate: 15deg;
         }
+
+        #movingContainer {
+            opacity: 0;
+            transform: translateX(200px);
+            transition: .5s ease-in-out;
+        }
     </style>
  </head>
  
  <body>
+    <div id="movingContainer">
     <div class="game-area"> 
         <div class="controls-area">
         <button data-type="rock" class= "jagged-shape jagged-shape-rock" id="rock"><span class="buttonText">Rock</span></button>
@@ -150,9 +157,29 @@
     </div>
 
     <a href="intro.html">Intro</a>
+</div>
 
  <!--CDN js and script.js-->    
  <script src="assets/js/script.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+ <script>
+    // Function to move the container and change opacity
+    function moveContainer() {
+        const movingContainer = document.getElementById("movingContainer");
+
+        // Move the entire container up by 100px
+        movingContainer.style.transform = "translateX(0px)";
+        // Change opacity to 1
+        movingContainer.style.opacity = "1";
+    }
+
+    // Call the function when the document is loaded
+    document.addEventListener("DOMContentLoaded", function () {
+        // Use setTimeout to delay the function call
+        setTimeout(moveContainer, 200); // Adjust the delay (in milliseconds) as needed
+    });
+</script>
+
 </body>
 </html>
