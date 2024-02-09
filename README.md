@@ -125,13 +125,14 @@ Choose between Normal, Lightning and Difficult level for play.
 ![choose](/assets/images/choose_a_mode.png)
 
 ### Timer
-
+Displays a 30 seconds timer:
+ ![alt text](/assets/images/Level_timer.png)
 
 ### Progress bar
 ![bar](/assets/images/progress_bar..png)
 
 ### Declaration of the winner 
-
+![results](/assets/images/results.png)
 
 ### Replay the game
 
