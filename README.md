@@ -2,7 +2,7 @@
 
 ![Image]()
 
-[Click here to view the live web application]()
+[Click here to view the live web application](https://nicolelir.github.io/Rock-Paper-Scissors-game/)
 
 The classic rock, paper, scissors game including the variation of lizard and Spock. This is an interactive front-end site that provides entertainment for people of all ages because of its straightforward rules and clear messaging.
 Users will be able to play a fun and entertaining game of Rock Paper Scissor Lizard Spock against the computer and, after three rounds, see a clear message on who the winner is. 
@@ -21,8 +21,6 @@ Not sure what Rock, Paper, Scissors, Lizard, Spock is? [Check out this clip from
 
 ## User Experience (UX)
 
-
-
 ### User stories 
 
 - As a player, I want to be able to choose from rock, paper, scissors, lizard, or Spock so that I can have a variety of options when playing the game.
@@ -39,7 +37,7 @@ Not sure what Rock, Paper, Scissors, Lizard, Spock is? [Check out this clip from
 
 ## Design
 
-Wireframes were created using Balsamiq:
+Wireframes were created using Balsamiq. The sections below show individual wireframes for different devices:
 
 - Desktop layout
 - Tablet layout
@@ -57,33 +55,30 @@ Typography
 - [CSS](https://en.wikipedia.org/wiki/CSS)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-## Frameworks & Tools
+## Frameworks, Libraries and  Tools
 
-- [Bootstrap v5.3.2](https://getbootstrap.com/)
-   - Used to help with the responsiveness of the site and to aid the coding of some of the layout
+- [Am I Responsive](https://ui.dev/amiresponsive) - Used to verify responsiveness of website on different devices.
+- [Bootstrap v5.3.2](https://getbootstrap.com/) - Used to help with the responsiveness of the site and to aid the coding of some of the layout
 
-- [Balsamiq](https://balsamiq.com/)
-   - Used to create the wireframes during the design process
+- [Balsamiq](https://balsamiq.com/) - Used to create the wireframes during the design process
 
-- [Favicon.io](https://favicon.io/)
-   - Used to create and add the favicon to the browser tab
+- [Favicon.io](https://favicon.io/) - Used to create and add the favicon to the browser tab
 
-- [Font Awesome](https://fontawesome.com/)
-   - Used to add icons to the site for aesthetic and UX purposes.
+- [Font Awesome](https://fontawesome.com/) - Used to add icons to the site for aesthetic and UX purposes.
 
-- [GitHub](https://github.com/)
-   - Used to store the project code after being created in GitPod 
+- [GitHub](https://github.com/) - Used to store the project code after being created in GitPod 
 
-- [Gitpod](https://www.gitpod.io/)
-   - Used to create, edit & preview the project's code
+- [Gitpod](https://www.gitpod.io/) - Used to create, edit & preview the project's code
 
-- [Google Fonts](https://fonts.google.com/)
-   - Used to import the 'Reboto' and 'Exo' fonts into the style.css file which are used on all pages of the project.
+- [Google Fonts](https://fonts.google.com/) - Used to import the 'Reboto' and 'Exo' fonts into the style.css file which are used on all pages of the project.
 
-- [Smartmockups](https://smartmockups.com/)
-   - Used to develop the wireframes in to a full mockup including colours, fonts, proportions, etc
+- [Smartmockups](https://smartmockups.com/) - Used to develop the wireframes in to a full mockup including colours, fonts, proportions, etc
   
+- [Visual Estudio Code](https://code.visualstudio.com/) - Application used for development of this site.
 
+- [W3C](https://www.w3.org/) - Used for HTML & CSS Validation.
+
+- [WAVE](https://wave.webaim.org/) - Used for Accessibility evaluation.
 
 ## Features
 
@@ -92,17 +87,18 @@ Typography
 1.	Open the website and view the header section with the logo and game title.
 2.	In the "---------------" section, you'll find buttons for Rock, Paper, Scissors, Spock, and Lizard.
 3.	Click on one of the buttons to select your move. The computer will automatically make its move.
+
 The rules are:
-- Scissors beats Paper
-- Paper beats Rock
-- Rock beats Lizard
-- Lizard beats Spock
-- Spock beats Scissors
-- Scissors beats Lizard
-- Paper beats Spock
-- Rock beats Scissors
-- Lizard beats Paper
-- Spock beats Rock
+- Scissors cuts paper
+- Paper covers rock
+- Rock crushes lizard
+- Lizard poisons Spock
+- Spock smashes scissors
+- Scissors decapitates lizard
+- Lizard eats paper
+- Paper disproves Spock
+- Spock vaporizes rock
+- Rock crushes scissors
 
 4.	The result of each round will be displayed in the ------------ section, showing both choices and the outcome.
 5.	The Progress Bar will keep track of your rounds and after 3 rounds the winner will be displayed on the screen
@@ -125,27 +121,36 @@ At the end of the game, a "Play again " button will be available. You can click 
 
 ### Validator testing
 
-- HTML
+The website was tested using the tools made available by the World Wide Web Consortium, also known as "W3C".
+
+The two tools used were the Markup Validation Service and the CSS Validation Service. Both tools were used to test the website by URL and also by direct input, with the results shown below.
+
+No errors were returned for all HTML or CSS across all tests. Some warnings were displayed.
+
+- HTML Validation by Direct Input
      
-- CSS
+- CSS Validation by Direct Input
 
 - JavaScript
 
-### Accessibility
-     
+
+### Manual testing
+
+The site was tested manually across a range of devices to ensure all links and styling work correctly and to ensure responsiveness across a range of devices. All features on the page were tested, to ensure functionality was not impacted in any way. 
+
 ### Browser Compatibility
 
-The site was tested on the following browsers
+Testing was carried out on multiple browsers such as Google Chrome, Microsoft Edge, Mozilla Firefox, Brave,  Safari and Opera. Testing was carried out on an Apple iPhone, Apple iPhone 13, Samsung Galaxy S20 FE, Samsung Galaxy A51 and Apple iPad Pro.
 
-- Google Chrome
-- Mozilla Firefox
-- Mricrosoft Edge
-- Safari on MacOS 
+### Lighthouse Testing
 
+A test was ran using Lighthouse within Google Chrome to verify performance and accessibility standards were met and to ensure best practices were followed.
+The full report can be viewed [here]().
+
+### Bugs Fixed
 
 ## Deployment 
 
-### Bugs Fixed
 
 ### GitHub Pages
 
@@ -157,10 +162,9 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 4. Click 'Save'
 5. A live link will be displayed when published successfully.
 
-The live link can be found [here]() .
+The live link can be found [here](https://nicolelir.github.io/Rock-Paper-Scissors-game/).
 
 ### Forking the GitHub Repository
-
 You can fork the repository by following these steps:
 
 1. Go to the GitHub repository
@@ -192,7 +196,9 @@ The project will now be cloned locally for you to use.
 
 ### Media
 
-
+- The icons in the ----------------were taken from--------------------------
+- The fonts used were imported from Google Fonts.
+- The images used were imported from ---------------------------
 
 
 ### Acknowledgements
