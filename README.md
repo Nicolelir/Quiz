@@ -1,6 +1,6 @@
 # <p style="text-align: center;">Rock, Paper, Scissors, Lizard, Spock</p>
 
-![Image]()
+![Logo](/assets/images/logo.png)
 
 [Click here to view the live web application](https://nicolelir.github.io/Rock-Paper-Scissors-game/)
 
@@ -20,6 +20,9 @@ Not sure what Rock, Paper, Scissors, Lizard, Spock is? [Check out this clip from
 - [Credits](#credits)
 
 ## User Experience (UX)
+
+The site’s users want to play an online game that has elements of chance.
+The site’s goal is to provide a challenging game with increasing levels of difficulty to entertain online users. 
 
 ### User stories 
 
@@ -43,10 +46,6 @@ Wireframes were created using Balsamiq. The sections below show individual wiref
 - Tablet layout
 - Smartphone layout
 
-Color Scheme
-
-Typography
-
 ## Technologies Used
 
 ### Languages
@@ -58,6 +57,7 @@ Typography
 ## Frameworks, Libraries and  Tools
 
 - [Am I Responsive](https://ui.dev/amiresponsive) - Used to verify responsiveness of website on different devices.
+
 - [Bootstrap v5.3.2](https://getbootstrap.com/) - Used to help with the responsiveness of the site and to aid the coding of some of the layout
 
 - [Balsamiq](https://balsamiq.com/) - Used to create the wireframes during the design process
@@ -84,8 +84,8 @@ Typography
 
 ### The Rules
 
-1.	Open the website and view the header section with the logo and game title.
-2.	In the "---------------" section, you'll find buttons for Rock, Paper, Scissors, Spock, and Lizard.
+1.	Open the website and view the game title. Iwill displayed two buttons: "How to play" and "game".
+2.	In the game section, you'll find buttons for Rock, Paper, Scissors, Spock, and Lizard. 
 3.	Click on one of the buttons to select your move. The computer will automatically make its move.
 
 The rules are:
@@ -100,19 +100,36 @@ The rules are:
 - Spock vaporizes rock
 - Rock crushes scissors
 
-4.	The result of each round will be displayed in the ------------ section, showing both choices and the outcome.
+4.	The result of each round will be displayed in the Overall results section, showing both choices and the outcome.
 5.	The Progress Bar will keep track of your rounds and after 3 rounds the winner will be displayed on the screen
 
+ To increase the difficulty of the game we created 3 levels: 
+ 
+#### Level: Normal   
+The previous steps detail the game in normal mode.
 
-### Heading, the title of the page 
-### Player choises
-### Player versus computer
+#### Level: Lightning  
+  For the lighting mode we add a timer of 30 seconds in which the player can click as many times as they want within 30 seconds of the game. After that time, the overall result is displayed and a "play again" button will show. There is a "reset button" during the game in case the player wants to restart their game.
+
+#### Level: Difficult 
+ It has 3 rounds, just like the normal mode, however, in this game, every time the computer wins it will score two points instead of 1!
+
+
+### Intro page
+
+
+### Choose your level
+
 ### Timer
+
+### Progress bar
+
 ### Declaration of the winner 
+
+
 ### Replay the game
 
 At the end of the game, a "Play again " button will be available. You can click this button if you want to play the game again and enjoy another round of Rock, Paper, Scissors, Lizard, Spock!
-
 
 ## Features Left to Implement
 
@@ -151,7 +168,7 @@ The full report can be viewed [here]().
 
 In a first version of our project we had a problem displaying the results. The results player/computer displayed "a draw" everytime the user cliked a button and the overall results was always a draw as well. This happened because the function that was supposed to count and update the scores was not working properly.
 
-![Results display](/assets/images/print%20tally%200.png)
+![Results display](/assets/images/print_tally_0.png)
 
 ## Deployment 
 
