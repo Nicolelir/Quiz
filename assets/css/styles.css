@@ -5,6 +5,88 @@ body {
   text-align: center;
 }
 
+/* Game Button Stylings */
+
+.opacity-rock {
+  height: 100%;
+  width: 100%;
+  background-image: url("/assets/images/Pixel-rock.png");
+  background-size: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.opacity-rock:hover {
+  opacity: 1;
+  transform: scale(1.5);
+  transition: .5s ease-in-out;
+}
+
+.opacity-paper {
+  height: 100%;
+  width: 100%;
+  background-image: url("/assets/images/Pixel-paper.png");
+  background-size: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.opacity-paper:hover {
+  opacity: 1;
+  transform: scale(1.5);
+  transition: .5s ease-in-out;
+}
+
+.opacity-scissors {
+  height: 100%;
+  width: 100%;
+  background-image: url("/assets/images/Pixel-scissors.png");
+  background-size: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.opacity-scissors:hover {
+  opacity: 1;
+  transform: scale(1.5);
+  transition: .5s ease-in-out;
+}
+
+.opacity-lizard {
+  height: 100%;
+  width: 100%;
+  background-image: url("/assets/images/Pixel-lizard.png");
+  background-size: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.opacity-lizard:hover {
+  opacity: 1;
+  transform: scale(1.5);
+  transition: .5s ease-in-out;
+}
+
+.opacity-spock {
+  height: 100%;
+  width: 100%;
+  background-image: url("/assets/images/Pixel-spock.png");
+  background-size: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.opacity-spock:hover {
+  opacity: 1;
+  transform: scale(1.5);
+  transition: .5s ease-in-out;
+}
+
 .game-area {
   background-color: #E6ECF0;
   box-sizing: border-box;
