@@ -208,3 +208,11 @@ function resultsTally(winner) {
         document.getElementById("computerTally").innerHTML = computerTally;
     }
 }
+
+//     // Update the scores display
+//     document.getElementById("playerScore").innerText = playerTally;
+//     document.getElementById("computerScore").innerText = computerTally;
+
+//     console.log("Player score:", playerTally);
+//     console.log("Computer score:", computerTally);
+// }
