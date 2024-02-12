@@ -2,6 +2,8 @@
 
 ![Logo](/assets/images/logo.png)
 
+![Logo](/assets/images//Responsive.png)
+
 [Click here to view the live web application](https://nicolelir.github.io/Rock-Paper-Scissors-game/)
 
 The classic rock, paper, scissors game including the variation of lizard and Spock. This is an interactive front-end site that provides entertainment for people of all ages because of its straightforward rules and clear messaging.
@@ -43,8 +45,16 @@ The site’s goal is to provide a challenging game with increasing levels of dif
 Wireframes were created using Balsamiq. The sections below show individual wireframes for different devices:
 
 - Desktop layout
+
+![img](/assets/images/laptop.png)
+
 - Tablet layout
+
+![img](/assets/images/tablet.png)
+
 - Smartphone layout
+
+![img](/assets/images/smartphone.png)
 
 ## Technologies Used
 
@@ -84,9 +94,10 @@ Wireframes were created using Balsamiq. The sections below show individual wiref
 
 ### The Rules
 
-1.	Open the website and view the game title. I will displayed two buttons: "How to" and "play".
-2.	In the game section, you'll find buttons for Rock, Paper, Scissors, Spock, and Lizard. 
-3.	Click on one of the buttons to select your move. The computer will automatically make its move.
+1.	Open the website and view the game title. It will displayed two buttons: "How to" and "play".
+2.	In the play section (choose a mode), you'll find 3 buttons for Normal, Lightning and Difficult.
+3.	In the game section (any mode you choose) you'll find buttons for Rock, Paper, Scissors, Spock, and Lizard. 
+4.	Click on one of the buttons to select your move. The computer will automatically make its move.
 
 The rules are:
 - Scissors cuts paper
@@ -100,8 +111,8 @@ The rules are:
 - Spock vaporizes rock
 - Rock crushes scissors
 
-4.	The result of each round will be displayed in the Overall results section, showing both choices and the outcome.
-5.	The Progress Bar will keep track of your rounds and after 3 rounds the winner will be displayed on the screen
+5.	The result of each round will be displayed in the Overall results section, showing both choices and the outcome.
+6.	The Progress Bar will keep track of your rounds and after 3 rounds the winner will be displayed on the screen
 
  To increase the difficulty of the game we created 3 levels: 
  
@@ -129,14 +140,14 @@ Displays a 30 seconds timer:
  ![alt text](/assets/images/Level_timer.png)
 
 ### Progress bar
-![bar](/assets/images/progress_bar..png)
+![bar](/assets/images/progress_bar.png)
 
 ### Declaration of the winner 
 ![results](/assets/images/results.png)
 
 ### Replay the game
 
-At the end of the game, a "Play again " button will be available. You can click this button if you want to play the game again and enjoy another round of Rock, Paper, Scissors, Lizard, Spock!
+At the end of the game, a "Reset" button (Play again) will be available. You can click this button if you want to play the game again and enjoy another round of Rock, Paper, Scissors, Lizard, Spock!
 
 ## Features Left to Implement
 
@@ -168,8 +179,20 @@ Testing was carried out on multiple browsers such as Google Chrome, Microsoft Ed
 
 ### Lighthouse Testing
 
-A test was ran using Lighthouse within Google Chrome to verify performance and accessibility standards were met and to ensure best practices were followed.
+A test in all pages was ran using Lighthouse within Google Chrome to verify performance and accessibility standards were met and to ensure best practices were followed.
 The full report can be viewed [here]().
+
+#### Index Page
+
+![img](/assets/images/report_index.png)
+
+#### Level Page
+
+![img](/assets/images/lighthouse_levels.png)
+
+#### Normal Leve; Page
+
+![img](/assets/images/lighthouse_normal.png)
 
 ### Bugs Fixed
 
