@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "resetButton") {
                 resetGame();
-                countdown();
             } else if (this.getAttribute("data-type") === "playAgainButton") {
                 playAgain();
             } else {
@@ -145,13 +144,17 @@ function resetGame() {
     // Reset computer's tally to 0
     document.getElementById("computerTally").innerHTML = "Computer Score: 0";
 }
-  // Clear result and overall result
-  document.querySelector(".result").innerHTML = "";
-  document.querySelector(".overall-result").innerHTML = "";
-  
-  // Reset tallies
-  document.getElementById("playerTally").innerHTML = "0";
-  document.getElementById("computerTally").innerHTML = "0";
+
+// Additional code for resetting UI elements immediately on page load
+resetGame();
+
+// Clear result and overall result
+document.querySelector(".result").innerHTML = "";
+document.querySelector(".overall-result").innerHTML = "";
+
+// Reset tallies
+document.getElementById("playerTally").innerHTML = "0";
+document.getElementById("computerTally").innerHTML = "0";
   
 
   function displayOverallWinner() {

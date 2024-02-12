@@ -28,15 +28,11 @@
 
 <body>
 
-    <!-- Add divs for result and overall-result -->
-
     <div class="game-area">
         <div class="timer" id="timer" style="  font-size: 50px;">
             Time left: <span id="countdown">30s</span>
         </div>
-        <div id="playerTally"></div>
-        <div id="computerTally"></div>
-
+     
         <div class="controls-area">
             <button data-type="rock" class="btn-game" id="rock"><img class="opacity-rock"
                     src="assets/images/pixelrock.png" alt="rock"></button>
@@ -49,10 +45,15 @@
         <button data-type="spock" class="btn-game" id="spock"><img class="opacity-spock"
                 src="assets/images/pixelspock.png" alt="spock"></button>
             </div>
+            
+         <!-- Existing scores div -->
+
+<div id="playerTally"></div>
+<div id="computerTally"></div>
 
         <div class="result"></div>
         <div class="overall-result"></div>
-        <button id="resetButton">Reset</button>
+        <button data-type="resetButton">Reset</button>
         <button id="menuButton"><a href="levels.html" style="color: #000; text-decoration: none;">Level Select</a></button>
     </div>
 
